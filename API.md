@@ -66,6 +66,8 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.getStringAttribute">getStringAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.resetCaCertPem">resetCaCertPem</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.resetInsecure">resetInsecure</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.resetMethod">resetMethod</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.resetRequestBody">resetRequestBody</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.resetRequestHeaders">resetRequestHeaders</a></code> | *No description.* |
@@ -256,6 +258,18 @@ public interpolationForAttribute(terraformAttribute: string): IResolvable
 
 ---
 
+##### `resetCaCertPem` <a name="resetCaCertPem" id="@cdktf/provider-http.dataHttp.DataHttp.resetCaCertPem"></a>
+
+```typescript
+public resetCaCertPem(): void
+```
+
+##### `resetInsecure` <a name="resetInsecure" id="@cdktf/provider-http.dataHttp.DataHttp.resetInsecure"></a>
+
+```typescript
+public resetInsecure(): void
+```
+
 ##### `resetMethod` <a name="resetMethod" id="@cdktf/provider-http.dataHttp.DataHttp.resetMethod"></a>
 
 ```typescript
@@ -335,10 +349,14 @@ Any object.
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.responseBody">responseBody</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.responseHeaders">responseHeaders</a></code> | <code>cdktf.StringMap</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.statusCode">statusCode</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.caCertPemInput">caCertPemInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.insecureInput">insecureInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.methodInput">methodInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestBodyInput">requestBodyInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestHeadersInput">requestHeadersInput</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.urlInput">urlInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.caCertPem">caCertPem</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.insecure">insecure</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.method">method</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestBody">requestBody</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestHeaders">requestHeaders</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
@@ -518,6 +536,26 @@ public readonly statusCode: number;
 
 ---
 
+##### `caCertPemInput`<sup>Optional</sup> <a name="caCertPemInput" id="@cdktf/provider-http.dataHttp.DataHttp.property.caCertPemInput"></a>
+
+```typescript
+public readonly caCertPemInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `insecureInput`<sup>Optional</sup> <a name="insecureInput" id="@cdktf/provider-http.dataHttp.DataHttp.property.insecureInput"></a>
+
+```typescript
+public readonly insecureInput: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+---
+
 ##### `methodInput`<sup>Optional</sup> <a name="methodInput" id="@cdktf/provider-http.dataHttp.DataHttp.property.methodInput"></a>
 
 ```typescript
@@ -555,6 +593,26 @@ public readonly urlInput: string;
 ```
 
 - *Type:* string
+
+---
+
+##### `caCertPem`<sup>Required</sup> <a name="caCertPem" id="@cdktf/provider-http.dataHttp.DataHttp.property.caCertPem"></a>
+
+```typescript
+public readonly caCertPem: string;
+```
+
+- *Type:* string
+
+---
+
+##### `insecure`<sup>Required</sup> <a name="insecure" id="@cdktf/provider-http.dataHttp.DataHttp.property.insecure"></a>
+
+```typescript
+public readonly insecure: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
 
 ---
 
@@ -945,6 +1003,8 @@ const dataHttpConfig: dataHttp.DataHttpConfig = { ... }
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.url">url</a></code> | <code>string</code> | The URL for the request. Supported schemes are `http` and `https`. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.caCertPem">caCertPem</a></code> | <code>string</code> | Certificate data of the Certificate Authority (CA) in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.insecure">insecure</a></code> | <code>boolean \| cdktf.IResolvable</code> | Disables verification of the server's certificate chain and hostname. Defaults to `false`. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.method">method</a></code> | <code>string</code> | The HTTP Method for the request. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.requestBody">requestBody</a></code> | <code>string</code> | The request body as a string. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.requestHeaders">requestHeaders</a></code> | <code>{[ key: string ]: string}</code> | A map of request header field names and values. |
@@ -1032,6 +1092,34 @@ public readonly url: string;
 The URL for the request. Supported schemes are `http` and `https`.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/http/d/http#url DataHttp#url}
+
+---
+
+##### `caCertPem`<sup>Optional</sup> <a name="caCertPem" id="@cdktf/provider-http.dataHttp.DataHttpConfig.property.caCertPem"></a>
+
+```typescript
+public readonly caCertPem: string;
+```
+
+- *Type:* string
+
+Certificate data of the Certificate Authority (CA) in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/http/d/http#ca_cert_pem DataHttp#ca_cert_pem}
+
+---
+
+##### `insecure`<sup>Optional</sup> <a name="insecure" id="@cdktf/provider-http.dataHttp.DataHttpConfig.property.insecure"></a>
+
+```typescript
+public readonly insecure: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+Disables verification of the server's certificate chain and hostname. Defaults to `false`.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/http/d/http#insecure DataHttp#insecure}
 
 ---
 
