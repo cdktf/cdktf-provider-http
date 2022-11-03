@@ -8,6 +8,18 @@ import * as cdktf from 'cdktf';
 
 export interface DataHttpConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Certificate data of the Certificate Authority (CA) in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/http/d/http#ca_cert_pem DataHttp#ca_cert_pem}
+  */
+  readonly caCertPem?: string;
+  /**
+  * Disables verification of the server's certificate chain and hostname. Defaults to `false`
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/http/d/http#insecure DataHttp#insecure}
+  */
+  readonly insecure?: boolean | cdktf.IResolvable;
+  /**
   * The HTTP Method for the request. Allowed methods are a subset of methods defined in [RFC7231](https://datatracker.ietf.org/doc/html/rfc7231#section-4.3) namely, `GET`, `HEAD`, and `POST`. `POST` support is only intended for read-only URLs, such as submitting a search.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/http/d/http#method DataHttp#method}
@@ -59,7 +71,7 @@ export class DataHttp extends cdktf.TerraformDataSource {
       terraformResourceType: 'http',
       terraformGeneratorMetadata: {
         providerName: 'http',
-        providerVersion: '3.1.0',
+        providerVersion: '3.2.0',
         providerVersionConstraint: '~> 3.1'
       },
       provider: config.provider,
@@ -70,6 +82,8 @@ export class DataHttp extends cdktf.TerraformDataSource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._caCertPem = config.caCertPem;
+    this._insecure = config.insecure;
     this._method = config.method;
     this._requestBody = config.requestBody;
     this._requestHeaders = config.requestHeaders;
@@ -85,9 +99,41 @@ export class DataHttp extends cdktf.TerraformDataSource {
     return this.getStringAttribute('body');
   }
 
+  // ca_cert_pem - computed: false, optional: true, required: false
+  private _caCertPem?: string; 
+  public get caCertPem() {
+    return this.getStringAttribute('ca_cert_pem');
+  }
+  public set caCertPem(value: string) {
+    this._caCertPem = value;
+  }
+  public resetCaCertPem() {
+    this._caCertPem = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get caCertPemInput() {
+    return this._caCertPem;
+  }
+
   // id - computed: true, optional: false, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // insecure - computed: false, optional: true, required: false
+  private _insecure?: boolean | cdktf.IResolvable; 
+  public get insecure() {
+    return this.getBooleanAttribute('insecure');
+  }
+  public set insecure(value: boolean | cdktf.IResolvable) {
+    this._insecure = value;
+  }
+  public resetInsecure() {
+    this._insecure = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get insecureInput() {
+    return this._insecure;
   }
 
   // method - computed: false, optional: true, required: false
@@ -173,6 +219,8 @@ export class DataHttp extends cdktf.TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      ca_cert_pem: cdktf.stringToTerraform(this._caCertPem),
+      insecure: cdktf.booleanToTerraform(this._insecure),
       method: cdktf.stringToTerraform(this._method),
       request_body: cdktf.stringToTerraform(this._requestBody),
       request_headers: cdktf.hashMapper(cdktf.stringToTerraform)(this._requestHeaders),
