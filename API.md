@@ -293,6 +293,8 @@ public resetRequestHeaders(): void
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.isTerraformElement">isTerraformElement</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.isTerraformDataSource">isTerraformDataSource</a></code> | *No description.* |
 
 ---
 
@@ -325,6 +327,34 @@ this type-testing method instead.
 - *Type:* any
 
 Any object.
+
+---
+
+##### `isTerraformElement` <a name="isTerraformElement" id="@cdktf/provider-http.dataHttp.DataHttp.isTerraformElement"></a>
+
+```typescript
+import { dataHttp } from '@cdktf/provider-http'
+
+dataHttp.DataHttp.isTerraformElement(x: any)
+```
+
+###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-http.dataHttp.DataHttp.isTerraformElement.parameter.x"></a>
+
+- *Type:* any
+
+---
+
+##### `isTerraformDataSource` <a name="isTerraformDataSource" id="@cdktf/provider-http.dataHttp.DataHttp.isTerraformDataSource"></a>
+
+```typescript
+import { dataHttp } from '@cdktf/provider-http'
+
+dataHttp.DataHttp.isTerraformDataSource(x: any)
+```
+
+###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-http.dataHttp.DataHttp.isTerraformDataSource.parameter.x"></a>
+
+- *Type:* any
 
 ---
 
@@ -807,6 +837,8 @@ public resetAlias(): void
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@cdktf/provider-http.provider.HttpProvider.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@cdktf/provider-http.provider.HttpProvider.isTerraformElement">isTerraformElement</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.provider.HttpProvider.isTerraformProvider">isTerraformProvider</a></code> | *No description.* |
 
 ---
 
@@ -839,6 +871,34 @@ this type-testing method instead.
 - *Type:* any
 
 Any object.
+
+---
+
+##### `isTerraformElement` <a name="isTerraformElement" id="@cdktf/provider-http.provider.HttpProvider.isTerraformElement"></a>
+
+```typescript
+import { provider } from '@cdktf/provider-http'
+
+provider.HttpProvider.isTerraformElement(x: any)
+```
+
+###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-http.provider.HttpProvider.isTerraformElement.parameter.x"></a>
+
+- *Type:* any
+
+---
+
+##### `isTerraformProvider` <a name="isTerraformProvider" id="@cdktf/provider-http.provider.HttpProvider.isTerraformProvider"></a>
+
+```typescript
+import { provider } from '@cdktf/provider-http'
+
+provider.HttpProvider.isTerraformProvider(x: any)
+```
+
+###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-http.provider.HttpProvider.isTerraformProvider.parameter.x"></a>
+
+- *Type:* any
 
 ---
 
