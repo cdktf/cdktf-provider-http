@@ -1,6 +1,6 @@
 # `data_http`
 
-Refer to the Terraform Registory for docs: [`data_http`](https://www.terraform.io/docs/providers/http/d/http).
+Refer to the Terraform Registory for docs: [`data_http`](https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http).
 
 # `dataHttp` Submodule <a name="`dataHttp` Submodule" id="@cdktf/provider-http.dataHttp"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_http`](https://www.terraform.i
 
 ### DataHttp <a name="DataHttp" id="@cdktf/provider-http.dataHttp.DataHttp"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/http/d/http http}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http http}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-http.dataHttp.DataHttp.Initializer"></a>
 
@@ -373,7 +373,7 @@ DataHttp.IsTerraformDataSource(object X);
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>System.Collections.Generic.IDictionary<string, object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -473,10 +473,10 @@ public TerraformProviderGeneratorMetadata TerraformGeneratorMetadata { get; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-http.dataHttp.DataHttp.property.count"></a>
 
 ```csharp
-public double Count { get; }
+public object Count { get; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -719,7 +719,7 @@ using HashiCorp.Cdktf.Providers.Http;
 
 new DataHttpConfig {
     object Connection = null,
-    double Count = null,
+    object Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
@@ -739,7 +739,7 @@ new DataHttpConfig {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -767,10 +767,10 @@ public object Connection { get; set; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-http.dataHttp.DataHttpConfig.property.count"></a>
 
 ```csharp
-public double Count { get; set; }
+public object Count { get; set; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -834,7 +834,7 @@ public string Url { get; set; }
 
 The URL for the request. Supported schemes are `http` and `https`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/http/d/http#url DataHttp#url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#url DataHttp#url}
 
 ---
 
@@ -848,7 +848,7 @@ public string CaCertPem { get; set; }
 
 Certificate data of the Certificate Authority (CA) in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/http/d/http#ca_cert_pem DataHttp#ca_cert_pem}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#ca_cert_pem DataHttp#ca_cert_pem}
 
 ---
 
@@ -862,7 +862,7 @@ public object Insecure { get; set; }
 
 Disables verification of the server's certificate chain and hostname. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/http/d/http#insecure DataHttp#insecure}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#insecure DataHttp#insecure}
 
 ---
 
@@ -878,7 +878,7 @@ The HTTP Method for the request.
 
 Allowed methods are a subset of methods defined in [RFC7231](https://datatracker.ietf.org/doc/html/rfc7231#section-4.3) namely, `GET`, `HEAD`, and `POST`. `POST` support is only intended for read-only URLs, such as submitting a search.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/http/d/http#method DataHttp#method}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#method DataHttp#method}
 
 ---
 
@@ -892,7 +892,7 @@ public string RequestBody { get; set; }
 
 The request body as a string.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/http/d/http#request_body DataHttp#request_body}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#request_body DataHttp#request_body}
 
 ---
 
@@ -906,7 +906,7 @@ public System.Collections.Generic.IDictionary<string, string> RequestHeaders { g
 
 A map of request header field names and values.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/http/d/http#request_headers DataHttp#request_headers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#request_headers DataHttp#request_headers}
 
 ---
 

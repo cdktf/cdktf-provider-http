@@ -1,6 +1,6 @@
 # `data_http`
 
-Refer to the Terraform Registory for docs: [`data_http`](https://www.terraform.io/docs/providers/http/d/http).
+Refer to the Terraform Registory for docs: [`data_http`](https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http).
 
 # `dataHttp` Submodule <a name="`dataHttp` Submodule" id="@cdktf/provider-http.dataHttp"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_http`](https://www.terraform.i
 
 ### DataHttp <a name="DataHttp" id="@cdktf/provider-http.dataHttp.DataHttp"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/http/d/http http}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http http}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-http.dataHttp.DataHttp.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-http-go/http/v4/datahttp"
+import "github.com/cdktf/cdktf-provider-http-go/http/datahttp"
 
 datahttp.NewDataHttp(scope Construct, id *string, config DataHttpConfig) DataHttp
 ```
@@ -305,7 +305,7 @@ func ResetRequestHeaders()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-http.dataHttp.DataHttp.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-http-go/http/v4/datahttp"
+import "github.com/cdktf/cdktf-provider-http-go/http/datahttp"
 
 datahttp.DataHttp_IsConstruct(x interface{}) *bool
 ```
@@ -337,7 +337,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-http.dataHttp.DataHttp.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-http-go/http/v4/datahttp"
+import "github.com/cdktf/cdktf-provider-http-go/http/datahttp"
 
 datahttp.DataHttp_IsTerraformElement(x interface{}) *bool
 ```
@@ -351,7 +351,7 @@ datahttp.DataHttp_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-http.dataHttp.DataHttp.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-http-go/http/v4/datahttp"
+import "github.com/cdktf/cdktf-provider-http-go/http/datahttp"
 
 datahttp.DataHttp_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -373,7 +373,7 @@ datahttp.DataHttp_IsTerraformDataSource(x interface{}) *bool
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>*map[string]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.terraformResourceType">TerraformResourceType</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.dependsOn">DependsOn</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -473,10 +473,10 @@ func TerraformGeneratorMetadata() TerraformProviderGeneratorMetadata
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-http.dataHttp.DataHttp.property.count"></a>
 
 ```go
-func Count() *f64
+func Count() interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -715,11 +715,11 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-http.dataHttp.DataHttpConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-http-go/http/v4/datahttp"
+import "github.com/cdktf/cdktf-provider-http-go/http/datahttp"
 
 &datahttp.DataHttpConfig {
 	Connection: interface{},
-	Count: *f64,
+	Count: interface{},
 	DependsOn: *[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable,
 	ForEach: github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator,
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
@@ -739,7 +739,7 @@ import "github.com/cdktf/cdktf-provider-http-go/http/v4/datahttp"
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.dependsOn">DependsOn</a></code> | <code>*[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -767,10 +767,10 @@ Connection interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-http.dataHttp.DataHttpConfig.property.count"></a>
 
 ```go
-Count *f64
+Count interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -834,7 +834,7 @@ Url *string
 
 The URL for the request. Supported schemes are `http` and `https`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/http/d/http#url DataHttp#url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#url DataHttp#url}
 
 ---
 
@@ -848,7 +848,7 @@ CaCertPem *string
 
 Certificate data of the Certificate Authority (CA) in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/http/d/http#ca_cert_pem DataHttp#ca_cert_pem}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#ca_cert_pem DataHttp#ca_cert_pem}
 
 ---
 
@@ -862,7 +862,7 @@ Insecure interface{}
 
 Disables verification of the server's certificate chain and hostname. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/http/d/http#insecure DataHttp#insecure}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#insecure DataHttp#insecure}
 
 ---
 
@@ -878,7 +878,7 @@ The HTTP Method for the request.
 
 Allowed methods are a subset of methods defined in [RFC7231](https://datatracker.ietf.org/doc/html/rfc7231#section-4.3) namely, `GET`, `HEAD`, and `POST`. `POST` support is only intended for read-only URLs, such as submitting a search.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/http/d/http#method DataHttp#method}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#method DataHttp#method}
 
 ---
 
@@ -892,7 +892,7 @@ RequestBody *string
 
 The request body as a string.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/http/d/http#request_body DataHttp#request_body}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#request_body DataHttp#request_body}
 
 ---
 
@@ -906,7 +906,7 @@ RequestHeaders *map[string]*string
 
 A map of request header field names and values.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/http/d/http#request_headers DataHttp#request_headers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#request_headers DataHttp#request_headers}
 
 ---
 

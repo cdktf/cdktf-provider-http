@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/http
+// https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,13 +10,13 @@ export interface HttpProviderConfig {
   /**
   * Alias name
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/http#alias HttpProvider#alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs#alias HttpProvider#alias}
   */
   readonly alias?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/http http}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs http}
 */
 export class HttpProvider extends cdktf.TerraformProvider {
 
@@ -30,7 +30,7 @@ export class HttpProvider extends cdktf.TerraformProvider {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/http http} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs http} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
