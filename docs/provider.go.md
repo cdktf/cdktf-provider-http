@@ -1,6 +1,6 @@
 # `provider`
 
-Refer to the Terraform Registory for docs: [`http`](https://www.terraform.io/docs/providers/http).
+Refer to the Terraform Registory for docs: [`http`](https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs).
 
 # `provider` Submodule <a name="`provider` Submodule" id="@cdktf/provider-http.provider"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`http`](https://www.terraform.io/doc
 
 ### HttpProvider <a name="HttpProvider" id="@cdktf/provider-http.provider.HttpProvider"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/http http}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs http}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-http.provider.HttpProvider.Initializer"></a>
 
@@ -373,7 +373,7 @@ Alias *string
 
 Alias name.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/http#alias HttpProvider#alias}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs#alias HttpProvider#alias}
 
 ---
 
