@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-http.dataHttp.DataHttp.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-http-go/http/v4/datahttp"
+import "github.com/cdktf/cdktf-provider-http-go/http/datahttp"
 
 datahttp.NewDataHttp(scope Construct, id *string, config DataHttpConfig) DataHttp
 ```
@@ -305,7 +305,7 @@ func ResetRequestHeaders()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-http.dataHttp.DataHttp.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-http-go/http/v4/datahttp"
+import "github.com/cdktf/cdktf-provider-http-go/http/datahttp"
 
 datahttp.DataHttp_IsConstruct(x interface{}) *bool
 ```
@@ -337,7 +337,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-http.dataHttp.DataHttp.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-http-go/http/v4/datahttp"
+import "github.com/cdktf/cdktf-provider-http-go/http/datahttp"
 
 datahttp.DataHttp_IsTerraformElement(x interface{}) *bool
 ```
@@ -351,7 +351,7 @@ datahttp.DataHttp_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-http.dataHttp.DataHttp.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-http-go/http/v4/datahttp"
+import "github.com/cdktf/cdktf-provider-http-go/http/datahttp"
 
 datahttp.DataHttp_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -715,7 +715,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-http.dataHttp.DataHttpConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-http-go/http/v4/datahttp"
+import "github.com/cdktf/cdktf-provider-http-go/http/datahttp"
 
 &datahttp.DataHttpConfig {
 	Connection: interface{},
