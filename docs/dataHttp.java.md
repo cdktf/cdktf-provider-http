@@ -1,6 +1,6 @@
 # `data_http`
 
-Refer to the Terraform Registory for docs: [`data_http`](https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http).
+Refer to the Terraform Registory for docs: [`data_http`](https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http).
 
 # `dataHttp` Submodule <a name="`dataHttp` Submodule" id="@cdktf/provider-http.dataHttp"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_http`](https://registry.terraf
 
 ### DataHttp <a name="DataHttp" id="@cdktf/provider-http.dataHttp.DataHttp"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http http}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http http}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-http.dataHttp.DataHttp.Initializer"></a>
 
@@ -34,6 +34,8 @@ DataHttp.Builder.create(Construct scope, java.lang.String id)
 //  .method(java.lang.String)
 //  .requestBody(java.lang.String)
 //  .requestHeaders(java.util.Map<java.lang.String, java.lang.String>)
+//  .requestTimeoutMs(java.lang.Number)
+//  .retry(DataHttpRetry)
     .build();
 ```
 
@@ -54,6 +56,8 @@ DataHttp.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.method">method</a></code> | <code>java.lang.String</code> | The HTTP Method for the request. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.requestBody">requestBody</a></code> | <code>java.lang.String</code> | The request body as a string. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.requestHeaders">requestHeaders</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | A map of request header field names and values. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.requestTimeoutMs">requestTimeoutMs</a></code> | <code>java.lang.Number</code> | The request timeout in milliseconds. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.retry">retry</a></code> | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a></code> | retry block. |
 
 ---
 
@@ -123,7 +127,7 @@ Must be unique amongst siblings in the same scope
 
 The URL for the request. Supported schemes are `http` and `https`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#url DataHttp#url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#url DataHttp#url}
 
 ---
 
@@ -133,7 +137,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Certificate data of the Certificate Authority (CA) in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#ca_cert_pem DataHttp#ca_cert_pem}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#ca_cert_pem DataHttp#ca_cert_pem}
 
 ---
 
@@ -143,7 +147,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Disables verification of the server's certificate chain and hostname. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#insecure DataHttp#insecure}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#insecure DataHttp#insecure}
 
 ---
 
@@ -155,7 +159,7 @@ The HTTP Method for the request.
 
 Allowed methods are a subset of methods defined in [RFC7231](https://datatracker.ietf.org/doc/html/rfc7231#section-4.3) namely, `GET`, `HEAD`, and `POST`. `POST` support is only intended for read-only URLs, such as submitting a search.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#method DataHttp#method}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#method DataHttp#method}
 
 ---
 
@@ -165,7 +169,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The request body as a string.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#request_body DataHttp#request_body}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#request_body DataHttp#request_body}
 
 ---
 
@@ -175,7 +179,27 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 A map of request header field names and values.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#request_headers DataHttp#request_headers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#request_headers DataHttp#request_headers}
+
+---
+
+##### `requestTimeoutMs`<sup>Optional</sup> <a name="requestTimeoutMs" id="@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.requestTimeoutMs"></a>
+
+- *Type:* java.lang.Number
+
+The request timeout in milliseconds.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#request_timeout_ms DataHttp#request_timeout_ms}
+
+---
+
+##### `retry`<sup>Optional</sup> <a name="retry" id="@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.retry"></a>
+
+- *Type:* <a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a>
+
+retry block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#retry DataHttp#retry}
 
 ---
 
@@ -199,11 +223,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.getStringAttribute">getStringAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.putRetry">putRetry</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.resetCaCertPem">resetCaCertPem</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.resetInsecure">resetInsecure</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.resetMethod">resetMethod</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.resetRequestBody">resetRequestBody</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.resetRequestHeaders">resetRequestHeaders</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.resetRequestTimeoutMs">resetRequestTimeoutMs</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.resetRetry">resetRetry</a></code> | *No description.* |
 
 ---
 
@@ -391,6 +418,18 @@ public IResolvable interpolationForAttribute(java.lang.String terraformAttribute
 
 ---
 
+##### `putRetry` <a name="putRetry" id="@cdktf/provider-http.dataHttp.DataHttp.putRetry"></a>
+
+```java
+public void putRetry(DataHttpRetry value)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-http.dataHttp.DataHttp.putRetry.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a>
+
+---
+
 ##### `resetCaCertPem` <a name="resetCaCertPem" id="@cdktf/provider-http.dataHttp.DataHttp.resetCaCertPem"></a>
 
 ```java
@@ -419,6 +458,18 @@ public void resetRequestBody()
 
 ```java
 public void resetRequestHeaders()
+```
+
+##### `resetRequestTimeoutMs` <a name="resetRequestTimeoutMs" id="@cdktf/provider-http.dataHttp.DataHttp.resetRequestTimeoutMs"></a>
+
+```java
+public void resetRequestTimeoutMs()
+```
+
+##### `resetRetry` <a name="resetRetry" id="@cdktf/provider-http.dataHttp.DataHttp.resetRetry"></a>
+
+```java
+public void resetRetry()
 ```
 
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
@@ -511,18 +562,22 @@ DataHttp.isTerraformDataSource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.responseBody">responseBody</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.responseHeaders">responseHeaders</a></code> | <code>com.hashicorp.cdktf.StringMap</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.retry">retry</a></code> | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference">DataHttpRetryOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.statusCode">statusCode</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.caCertPemInput">caCertPemInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.insecureInput">insecureInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.methodInput">methodInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestBodyInput">requestBodyInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestHeadersInput">requestHeadersInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestTimeoutMsInput">requestTimeoutMsInput</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.retryInput">retryInput</a></code> | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.urlInput">urlInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.caCertPem">caCertPem</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.insecure">insecure</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.method">method</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestBody">requestBody</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestHeaders">requestHeaders</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestTimeoutMs">requestTimeoutMs</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.url">url</a></code> | <code>java.lang.String</code> | *No description.* |
 
 ---
@@ -689,6 +744,16 @@ public StringMap getResponseHeaders();
 
 ---
 
+##### `retry`<sup>Required</sup> <a name="retry" id="@cdktf/provider-http.dataHttp.DataHttp.property.retry"></a>
+
+```java
+public DataHttpRetryOutputReference getRetry();
+```
+
+- *Type:* <a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference">DataHttpRetryOutputReference</a>
+
+---
+
 ##### `statusCode`<sup>Required</sup> <a name="statusCode" id="@cdktf/provider-http.dataHttp.DataHttp.property.statusCode"></a>
 
 ```java
@@ -746,6 +811,26 @@ public java.util.Map<java.lang.String, java.lang.String> getRequestHeadersInput(
 ```
 
 - *Type:* java.util.Map<java.lang.String, java.lang.String>
+
+---
+
+##### `requestTimeoutMsInput`<sup>Optional</sup> <a name="requestTimeoutMsInput" id="@cdktf/provider-http.dataHttp.DataHttp.property.requestTimeoutMsInput"></a>
+
+```java
+public java.lang.Number getRequestTimeoutMsInput();
+```
+
+- *Type:* java.lang.Number
+
+---
+
+##### `retryInput`<sup>Optional</sup> <a name="retryInput" id="@cdktf/provider-http.dataHttp.DataHttp.property.retryInput"></a>
+
+```java
+public java.lang.Object getRetryInput();
+```
+
+- *Type:* <a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a> OR com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -809,6 +894,16 @@ public java.util.Map<java.lang.String, java.lang.String> getRequestHeaders();
 
 ---
 
+##### `requestTimeoutMs`<sup>Required</sup> <a name="requestTimeoutMs" id="@cdktf/provider-http.dataHttp.DataHttp.property.requestTimeoutMs"></a>
+
+```java
+public java.lang.Number getRequestTimeoutMs();
+```
+
+- *Type:* java.lang.Number
+
+---
+
 ##### `url`<sup>Required</sup> <a name="url" id="@cdktf/provider-http.dataHttp.DataHttp.property.url"></a>
 
 ```java
@@ -865,6 +960,8 @@ DataHttpConfig.builder()
 //  .method(java.lang.String)
 //  .requestBody(java.lang.String)
 //  .requestHeaders(java.util.Map<java.lang.String, java.lang.String>)
+//  .requestTimeoutMs(java.lang.Number)
+//  .retry(DataHttpRetry)
     .build();
 ```
 
@@ -885,6 +982,8 @@ DataHttpConfig.builder()
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.method">method</a></code> | <code>java.lang.String</code> | The HTTP Method for the request. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.requestBody">requestBody</a></code> | <code>java.lang.String</code> | The request body as a string. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.requestHeaders">requestHeaders</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | A map of request header field names and values. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.requestTimeoutMs">requestTimeoutMs</a></code> | <code>java.lang.Number</code> | The request timeout in milliseconds. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.retry">retry</a></code> | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a></code> | retry block. |
 
 ---
 
@@ -968,7 +1067,7 @@ public java.lang.String getUrl();
 
 The URL for the request. Supported schemes are `http` and `https`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#url DataHttp#url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#url DataHttp#url}
 
 ---
 
@@ -982,7 +1081,7 @@ public java.lang.String getCaCertPem();
 
 Certificate data of the Certificate Authority (CA) in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#ca_cert_pem DataHttp#ca_cert_pem}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#ca_cert_pem DataHttp#ca_cert_pem}
 
 ---
 
@@ -996,7 +1095,7 @@ public java.lang.Object getInsecure();
 
 Disables verification of the server's certificate chain and hostname. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#insecure DataHttp#insecure}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#insecure DataHttp#insecure}
 
 ---
 
@@ -1012,7 +1111,7 @@ The HTTP Method for the request.
 
 Allowed methods are a subset of methods defined in [RFC7231](https://datatracker.ietf.org/doc/html/rfc7231#section-4.3) namely, `GET`, `HEAD`, and `POST`. `POST` support is only intended for read-only URLs, such as submitting a search.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#method DataHttp#method}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#method DataHttp#method}
 
 ---
 
@@ -1026,7 +1125,7 @@ public java.lang.String getRequestBody();
 
 The request body as a string.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#request_body DataHttp#request_body}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#request_body DataHttp#request_body}
 
 ---
 
@@ -1040,7 +1139,440 @@ public java.util.Map<java.lang.String, java.lang.String> getRequestHeaders();
 
 A map of request header field names and values.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#request_headers DataHttp#request_headers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#request_headers DataHttp#request_headers}
+
+---
+
+##### `requestTimeoutMs`<sup>Optional</sup> <a name="requestTimeoutMs" id="@cdktf/provider-http.dataHttp.DataHttpConfig.property.requestTimeoutMs"></a>
+
+```java
+public java.lang.Number getRequestTimeoutMs();
+```
+
+- *Type:* java.lang.Number
+
+The request timeout in milliseconds.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#request_timeout_ms DataHttp#request_timeout_ms}
+
+---
+
+##### `retry`<sup>Optional</sup> <a name="retry" id="@cdktf/provider-http.dataHttp.DataHttpConfig.property.retry"></a>
+
+```java
+public DataHttpRetry getRetry();
+```
+
+- *Type:* <a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a>
+
+retry block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#retry DataHttp#retry}
+
+---
+
+### DataHttpRetry <a name="DataHttpRetry" id="@cdktf/provider-http.dataHttp.DataHttpRetry"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-http.dataHttp.DataHttpRetry.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.http.data_http.DataHttpRetry;
+
+DataHttpRetry.builder()
+//  .attempts(java.lang.Number)
+//  .maxDelayMs(java.lang.Number)
+//  .minDelayMs(java.lang.Number)
+    .build();
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetry.property.attempts">attempts</a></code> | <code>java.lang.Number</code> | The number of times the request is to be retried. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetry.property.maxDelayMs">maxDelayMs</a></code> | <code>java.lang.Number</code> | The maximum delay between retry requests in milliseconds. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetry.property.minDelayMs">minDelayMs</a></code> | <code>java.lang.Number</code> | The minimum delay between retry requests in milliseconds. |
+
+---
+
+##### `attempts`<sup>Optional</sup> <a name="attempts" id="@cdktf/provider-http.dataHttp.DataHttpRetry.property.attempts"></a>
+
+```java
+public java.lang.Number getAttempts();
+```
+
+- *Type:* java.lang.Number
+
+The number of times the request is to be retried.
+
+For example, if 2 is specified, the request will be tried a maximum of 3 times.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#attempts DataHttp#attempts}
+
+---
+
+##### `maxDelayMs`<sup>Optional</sup> <a name="maxDelayMs" id="@cdktf/provider-http.dataHttp.DataHttpRetry.property.maxDelayMs"></a>
+
+```java
+public java.lang.Number getMaxDelayMs();
+```
+
+- *Type:* java.lang.Number
+
+The maximum delay between retry requests in milliseconds.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#max_delay_ms DataHttp#max_delay_ms}
+
+---
+
+##### `minDelayMs`<sup>Optional</sup> <a name="minDelayMs" id="@cdktf/provider-http.dataHttp.DataHttpRetry.property.minDelayMs"></a>
+
+```java
+public java.lang.Number getMinDelayMs();
+```
+
+- *Type:* java.lang.Number
+
+The minimum delay between retry requests in milliseconds.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#min_delay_ms DataHttp#min_delay_ms}
+
+---
+
+## Classes <a name="Classes" id="Classes"></a>
+
+### DataHttpRetryOutputReference <a name="DataHttpRetryOutputReference" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.http.data_http.DataHttpRetryOutputReference;
+
+new DataHttpRetryOutputReference(IInterpolatingParent terraformResource, java.lang.String terraformAttribute);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>com.hashicorp.cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* com.hashicorp.cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.resetAttempts">resetAttempts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.resetMaxDelayMs">resetMaxDelayMs</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.resetMinDelayMs">resetMinDelayMs</a></code> | *No description.* |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.computeFqn"></a>
+
+```java
+public java.lang.String computeFqn()
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getAnyMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> getAnyMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getBooleanAttribute"></a>
+
+```java
+public IResolvable getBooleanAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getBooleanMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Boolean> getBooleanMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getListAttribute"></a>
+
+```java
+public java.util.List<java.lang.String> getListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getNumberAttribute"></a>
+
+```java
+public java.lang.Number getNumberAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getNumberListAttribute"></a>
+
+```java
+public java.util.List<java.lang.Number> getNumberListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getNumberMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Number> getNumberMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getStringAttribute"></a>
+
+```java
+public java.lang.String getStringAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getStringMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.interpolationForAttribute"></a>
+
+```java
+public IResolvable interpolationForAttribute(java.lang.String property)
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.resolve"></a>
+
+```java
+public java.lang.Object resolve(IResolveContext _context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.resolve.parameter._context"></a>
+
+- *Type:* com.hashicorp.cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `resetAttempts` <a name="resetAttempts" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.resetAttempts"></a>
+
+```java
+public void resetAttempts()
+```
+
+##### `resetMaxDelayMs` <a name="resetMaxDelayMs" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.resetMaxDelayMs"></a>
+
+```java
+public void resetMaxDelayMs()
+```
+
+##### `resetMinDelayMs` <a name="resetMinDelayMs" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.resetMinDelayMs"></a>
+
+```java
+public void resetMinDelayMs()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.attemptsInput">attemptsInput</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.maxDelayMsInput">maxDelayMsInput</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.minDelayMsInput">minDelayMsInput</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.attempts">attempts</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.maxDelayMs">maxDelayMs</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.minDelayMs">minDelayMs</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.creationStack"></a>
+
+```java
+public java.util.List<java.lang.String> getCreationStack();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `attemptsInput`<sup>Optional</sup> <a name="attemptsInput" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.attemptsInput"></a>
+
+```java
+public java.lang.Number getAttemptsInput();
+```
+
+- *Type:* java.lang.Number
+
+---
+
+##### `maxDelayMsInput`<sup>Optional</sup> <a name="maxDelayMsInput" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.maxDelayMsInput"></a>
+
+```java
+public java.lang.Number getMaxDelayMsInput();
+```
+
+- *Type:* java.lang.Number
+
+---
+
+##### `minDelayMsInput`<sup>Optional</sup> <a name="minDelayMsInput" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.minDelayMsInput"></a>
+
+```java
+public java.lang.Number getMinDelayMsInput();
+```
+
+- *Type:* java.lang.Number
+
+---
+
+##### `attempts`<sup>Required</sup> <a name="attempts" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.attempts"></a>
+
+```java
+public java.lang.Number getAttempts();
+```
+
+- *Type:* java.lang.Number
+
+---
+
+##### `maxDelayMs`<sup>Required</sup> <a name="maxDelayMs" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.maxDelayMs"></a>
+
+```java
+public java.lang.Number getMaxDelayMs();
+```
+
+- *Type:* java.lang.Number
+
+---
+
+##### `minDelayMs`<sup>Required</sup> <a name="minDelayMs" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.minDelayMs"></a>
+
+```java
+public java.lang.Number getMinDelayMs();
+```
+
+- *Type:* java.lang.Number
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.internalValue"></a>
+
+```java
+public java.lang.Object getInternalValue();
+```
+
+- *Type:* <a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a> OR com.hashicorp.cdktf.IResolvable
 
 ---
 
