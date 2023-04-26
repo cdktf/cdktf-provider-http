@@ -1,6 +1,6 @@
 # `data_http`
 
-Refer to the Terraform Registory for docs: [`data_http`](https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http).
+Refer to the Terraform Registory for docs: [`data_http`](https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http).
 
 # `dataHttp` Submodule <a name="`dataHttp` Submodule" id="@cdktf/provider-http.dataHttp"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_http`](https://registry.terraf
 
 ### DataHttp <a name="DataHttp" id="@cdktf/provider-http.dataHttp.DataHttp"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http http}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http http}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-http.dataHttp.DataHttp.Initializer"></a>
 
@@ -70,11 +70,14 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.getStringAttribute">getStringAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.putRetry">putRetry</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.resetCaCertPem">resetCaCertPem</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.resetInsecure">resetInsecure</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.resetMethod">resetMethod</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.resetRequestBody">resetRequestBody</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.resetRequestHeaders">resetRequestHeaders</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.resetRequestTimeoutMs">resetRequestTimeoutMs</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.resetRetry">resetRetry</a></code> | *No description.* |
 
 ---
 
@@ -262,6 +265,18 @@ public interpolationForAttribute(terraformAttribute: string): IResolvable
 
 ---
 
+##### `putRetry` <a name="putRetry" id="@cdktf/provider-http.dataHttp.DataHttp.putRetry"></a>
+
+```typescript
+public putRetry(value: DataHttpRetry): void
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-http.dataHttp.DataHttp.putRetry.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a>
+
+---
+
 ##### `resetCaCertPem` <a name="resetCaCertPem" id="@cdktf/provider-http.dataHttp.DataHttp.resetCaCertPem"></a>
 
 ```typescript
@@ -290,6 +305,18 @@ public resetRequestBody(): void
 
 ```typescript
 public resetRequestHeaders(): void
+```
+
+##### `resetRequestTimeoutMs` <a name="resetRequestTimeoutMs" id="@cdktf/provider-http.dataHttp.DataHttp.resetRequestTimeoutMs"></a>
+
+```typescript
+public resetRequestTimeoutMs(): void
+```
+
+##### `resetRetry` <a name="resetRetry" id="@cdktf/provider-http.dataHttp.DataHttp.resetRetry"></a>
+
+```typescript
+public resetRetry(): void
 ```
 
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
@@ -382,18 +409,22 @@ dataHttp.DataHttp.isTerraformDataSource(x: any)
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.responseBody">responseBody</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.responseHeaders">responseHeaders</a></code> | <code>cdktf.StringMap</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.retry">retry</a></code> | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference">DataHttpRetryOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.statusCode">statusCode</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.caCertPemInput">caCertPemInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.insecureInput">insecureInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.methodInput">methodInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestBodyInput">requestBodyInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestHeadersInput">requestHeadersInput</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestTimeoutMsInput">requestTimeoutMsInput</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.retryInput">retryInput</a></code> | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a> \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.urlInput">urlInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.caCertPem">caCertPem</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.insecure">insecure</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.method">method</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestBody">requestBody</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestHeaders">requestHeaders</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestTimeoutMs">requestTimeoutMs</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.url">url</a></code> | <code>string</code> | *No description.* |
 
 ---
@@ -560,6 +591,16 @@ public readonly responseHeaders: StringMap;
 
 ---
 
+##### `retry`<sup>Required</sup> <a name="retry" id="@cdktf/provider-http.dataHttp.DataHttp.property.retry"></a>
+
+```typescript
+public readonly retry: DataHttpRetryOutputReference;
+```
+
+- *Type:* <a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference">DataHttpRetryOutputReference</a>
+
+---
+
 ##### `statusCode`<sup>Required</sup> <a name="statusCode" id="@cdktf/provider-http.dataHttp.DataHttp.property.statusCode"></a>
 
 ```typescript
@@ -617,6 +658,26 @@ public readonly requestHeadersInput: {[ key: string ]: string};
 ```
 
 - *Type:* {[ key: string ]: string}
+
+---
+
+##### `requestTimeoutMsInput`<sup>Optional</sup> <a name="requestTimeoutMsInput" id="@cdktf/provider-http.dataHttp.DataHttp.property.requestTimeoutMsInput"></a>
+
+```typescript
+public readonly requestTimeoutMsInput: number;
+```
+
+- *Type:* number
+
+---
+
+##### `retryInput`<sup>Optional</sup> <a name="retryInput" id="@cdktf/provider-http.dataHttp.DataHttp.property.retryInput"></a>
+
+```typescript
+public readonly retryInput: DataHttpRetry | IResolvable;
+```
+
+- *Type:* <a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a> | cdktf.IResolvable
 
 ---
 
@@ -680,6 +741,16 @@ public readonly requestHeaders: {[ key: string ]: string};
 
 ---
 
+##### `requestTimeoutMs`<sup>Required</sup> <a name="requestTimeoutMs" id="@cdktf/provider-http.dataHttp.DataHttp.property.requestTimeoutMs"></a>
+
+```typescript
+public readonly requestTimeoutMs: number;
+```
+
+- *Type:* number
+
+---
+
 ##### `url`<sup>Required</sup> <a name="url" id="@cdktf/provider-http.dataHttp.DataHttp.property.url"></a>
 
 ```typescript
@@ -737,6 +808,8 @@ const dataHttpConfig: dataHttp.DataHttpConfig = { ... }
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.method">method</a></code> | <code>string</code> | The HTTP Method for the request. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.requestBody">requestBody</a></code> | <code>string</code> | The request body as a string. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.requestHeaders">requestHeaders</a></code> | <code>{[ key: string ]: string}</code> | A map of request header field names and values. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.requestTimeoutMs">requestTimeoutMs</a></code> | <code>number</code> | The request timeout in milliseconds. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.retry">retry</a></code> | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a></code> | retry block. |
 
 ---
 
@@ -820,7 +893,7 @@ public readonly url: string;
 
 The URL for the request. Supported schemes are `http` and `https`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#url DataHttp#url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#url DataHttp#url}
 
 ---
 
@@ -834,7 +907,7 @@ public readonly caCertPem: string;
 
 Certificate data of the Certificate Authority (CA) in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#ca_cert_pem DataHttp#ca_cert_pem}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#ca_cert_pem DataHttp#ca_cert_pem}
 
 ---
 
@@ -848,7 +921,7 @@ public readonly insecure: boolean | IResolvable;
 
 Disables verification of the server's certificate chain and hostname. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#insecure DataHttp#insecure}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#insecure DataHttp#insecure}
 
 ---
 
@@ -864,7 +937,7 @@ The HTTP Method for the request.
 
 Allowed methods are a subset of methods defined in [RFC7231](https://datatracker.ietf.org/doc/html/rfc7231#section-4.3) namely, `GET`, `HEAD`, and `POST`. `POST` support is only intended for read-only URLs, such as submitting a search.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#method DataHttp#method}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#method DataHttp#method}
 
 ---
 
@@ -878,7 +951,7 @@ public readonly requestBody: string;
 
 The request body as a string.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#request_body DataHttp#request_body}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#request_body DataHttp#request_body}
 
 ---
 
@@ -892,7 +965,436 @@ public readonly requestHeaders: {[ key: string ]: string};
 
 A map of request header field names and values.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#request_headers DataHttp#request_headers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#request_headers DataHttp#request_headers}
+
+---
+
+##### `requestTimeoutMs`<sup>Optional</sup> <a name="requestTimeoutMs" id="@cdktf/provider-http.dataHttp.DataHttpConfig.property.requestTimeoutMs"></a>
+
+```typescript
+public readonly requestTimeoutMs: number;
+```
+
+- *Type:* number
+
+The request timeout in milliseconds.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#request_timeout_ms DataHttp#request_timeout_ms}
+
+---
+
+##### `retry`<sup>Optional</sup> <a name="retry" id="@cdktf/provider-http.dataHttp.DataHttpConfig.property.retry"></a>
+
+```typescript
+public readonly retry: DataHttpRetry;
+```
+
+- *Type:* <a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a>
+
+retry block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#retry DataHttp#retry}
+
+---
+
+### DataHttpRetry <a name="DataHttpRetry" id="@cdktf/provider-http.dataHttp.DataHttpRetry"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-http.dataHttp.DataHttpRetry.Initializer"></a>
+
+```typescript
+import { dataHttp } from '@cdktf/provider-http'
+
+const dataHttpRetry: dataHttp.DataHttpRetry = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetry.property.attempts">attempts</a></code> | <code>number</code> | The number of times the request is to be retried. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetry.property.maxDelayMs">maxDelayMs</a></code> | <code>number</code> | The maximum delay between retry requests in milliseconds. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetry.property.minDelayMs">minDelayMs</a></code> | <code>number</code> | The minimum delay between retry requests in milliseconds. |
+
+---
+
+##### `attempts`<sup>Optional</sup> <a name="attempts" id="@cdktf/provider-http.dataHttp.DataHttpRetry.property.attempts"></a>
+
+```typescript
+public readonly attempts: number;
+```
+
+- *Type:* number
+
+The number of times the request is to be retried.
+
+For example, if 2 is specified, the request will be tried a maximum of 3 times.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#attempts DataHttp#attempts}
+
+---
+
+##### `maxDelayMs`<sup>Optional</sup> <a name="maxDelayMs" id="@cdktf/provider-http.dataHttp.DataHttpRetry.property.maxDelayMs"></a>
+
+```typescript
+public readonly maxDelayMs: number;
+```
+
+- *Type:* number
+
+The maximum delay between retry requests in milliseconds.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#max_delay_ms DataHttp#max_delay_ms}
+
+---
+
+##### `minDelayMs`<sup>Optional</sup> <a name="minDelayMs" id="@cdktf/provider-http.dataHttp.DataHttpRetry.property.minDelayMs"></a>
+
+```typescript
+public readonly minDelayMs: number;
+```
+
+- *Type:* number
+
+The minimum delay between retry requests in milliseconds.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#min_delay_ms DataHttp#min_delay_ms}
+
+---
+
+## Classes <a name="Classes" id="Classes"></a>
+
+### DataHttpRetryOutputReference <a name="DataHttpRetryOutputReference" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.Initializer"></a>
+
+```typescript
+import { dataHttp } from '@cdktf/provider-http'
+
+new dataHttp.DataHttpRetryOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.resetAttempts">resetAttempts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.resetMaxDelayMs">resetMaxDelayMs</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.resetMinDelayMs">resetMinDelayMs</a></code> | *No description.* |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.computeFqn"></a>
+
+```typescript
+public computeFqn(): string
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getAnyMapAttribute"></a>
+
+```typescript
+public getAnyMapAttribute(terraformAttribute: string): {[ key: string ]: any}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getBooleanAttribute"></a>
+
+```typescript
+public getBooleanAttribute(terraformAttribute: string): IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getBooleanMapAttribute"></a>
+
+```typescript
+public getBooleanMapAttribute(terraformAttribute: string): {[ key: string ]: boolean}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getListAttribute"></a>
+
+```typescript
+public getListAttribute(terraformAttribute: string): string[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getNumberAttribute"></a>
+
+```typescript
+public getNumberAttribute(terraformAttribute: string): number
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getNumberListAttribute"></a>
+
+```typescript
+public getNumberListAttribute(terraformAttribute: string): number[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getNumberMapAttribute"></a>
+
+```typescript
+public getNumberMapAttribute(terraformAttribute: string): {[ key: string ]: number}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getStringAttribute"></a>
+
+```typescript
+public getStringAttribute(terraformAttribute: string): string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getStringMapAttribute"></a>
+
+```typescript
+public getStringMapAttribute(terraformAttribute: string): {[ key: string ]: string}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.interpolationForAttribute"></a>
+
+```typescript
+public interpolationForAttribute(property: string): IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.resolve"></a>
+
+```typescript
+public resolve(_context: IResolveContext): any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `resetAttempts` <a name="resetAttempts" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.resetAttempts"></a>
+
+```typescript
+public resetAttempts(): void
+```
+
+##### `resetMaxDelayMs` <a name="resetMaxDelayMs" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.resetMaxDelayMs"></a>
+
+```typescript
+public resetMaxDelayMs(): void
+```
+
+##### `resetMinDelayMs` <a name="resetMinDelayMs" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.resetMinDelayMs"></a>
+
+```typescript
+public resetMinDelayMs(): void
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.attemptsInput">attemptsInput</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.maxDelayMsInput">maxDelayMsInput</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.minDelayMsInput">minDelayMsInput</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.attempts">attempts</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.maxDelayMs">maxDelayMs</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.minDelayMs">minDelayMs</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a> \| cdktf.IResolvable</code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.creationStack"></a>
+
+```typescript
+public readonly creationStack: string[];
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `attemptsInput`<sup>Optional</sup> <a name="attemptsInput" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.attemptsInput"></a>
+
+```typescript
+public readonly attemptsInput: number;
+```
+
+- *Type:* number
+
+---
+
+##### `maxDelayMsInput`<sup>Optional</sup> <a name="maxDelayMsInput" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.maxDelayMsInput"></a>
+
+```typescript
+public readonly maxDelayMsInput: number;
+```
+
+- *Type:* number
+
+---
+
+##### `minDelayMsInput`<sup>Optional</sup> <a name="minDelayMsInput" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.minDelayMsInput"></a>
+
+```typescript
+public readonly minDelayMsInput: number;
+```
+
+- *Type:* number
+
+---
+
+##### `attempts`<sup>Required</sup> <a name="attempts" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.attempts"></a>
+
+```typescript
+public readonly attempts: number;
+```
+
+- *Type:* number
+
+---
+
+##### `maxDelayMs`<sup>Required</sup> <a name="maxDelayMs" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.maxDelayMs"></a>
+
+```typescript
+public readonly maxDelayMs: number;
+```
+
+- *Type:* number
+
+---
+
+##### `minDelayMs`<sup>Required</sup> <a name="minDelayMs" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.minDelayMs"></a>
+
+```typescript
+public readonly minDelayMs: number;
+```
+
+- *Type:* number
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: DataHttpRetry | IResolvable;
+```
+
+- *Type:* <a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a> | cdktf.IResolvable
 
 ---
 

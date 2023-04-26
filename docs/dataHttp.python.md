@@ -1,6 +1,6 @@
 # `data_http`
 
-Refer to the Terraform Registory for docs: [`data_http`](https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http).
+Refer to the Terraform Registory for docs: [`data_http`](https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http).
 
 # `dataHttp` Submodule <a name="`dataHttp` Submodule" id="@cdktf/provider-http.dataHttp"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_http`](https://registry.terraf
 
 ### DataHttp <a name="DataHttp" id="@cdktf/provider-http.dataHttp.DataHttp"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http http}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http http}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-http.dataHttp.DataHttp.Initializer"></a>
 
@@ -30,7 +30,9 @@ dataHttp.DataHttp(
   insecure: typing.Union[bool, IResolvable] = None,
   method: str = None,
   request_body: str = None,
-  request_headers: typing.Mapping[str] = None
+  request_headers: typing.Mapping[str] = None,
+  request_timeout_ms: typing.Union[int, float] = None,
+  retry: DataHttpRetry = None
 )
 ```
 
@@ -51,6 +53,8 @@ dataHttp.DataHttp(
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.method">method</a></code> | <code>str</code> | The HTTP Method for the request. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.requestBody">request_body</a></code> | <code>str</code> | The request body as a string. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.requestHeaders">request_headers</a></code> | <code>typing.Mapping[str]</code> | A map of request header field names and values. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.requestTimeoutMs">request_timeout_ms</a></code> | <code>typing.Union[int, float]</code> | The request timeout in milliseconds. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.retry">retry</a></code> | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a></code> | retry block. |
 
 ---
 
@@ -120,7 +124,7 @@ Must be unique amongst siblings in the same scope
 
 The URL for the request. Supported schemes are `http` and `https`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#url DataHttp#url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#url DataHttp#url}
 
 ---
 
@@ -130,7 +134,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Certificate data of the Certificate Authority (CA) in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#ca_cert_pem DataHttp#ca_cert_pem}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#ca_cert_pem DataHttp#ca_cert_pem}
 
 ---
 
@@ -140,7 +144,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Disables verification of the server's certificate chain and hostname. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#insecure DataHttp#insecure}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#insecure DataHttp#insecure}
 
 ---
 
@@ -152,7 +156,7 @@ The HTTP Method for the request.
 
 Allowed methods are a subset of methods defined in [RFC7231](https://datatracker.ietf.org/doc/html/rfc7231#section-4.3) namely, `GET`, `HEAD`, and `POST`. `POST` support is only intended for read-only URLs, such as submitting a search.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#method DataHttp#method}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#method DataHttp#method}
 
 ---
 
@@ -162,7 +166,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The request body as a string.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#request_body DataHttp#request_body}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#request_body DataHttp#request_body}
 
 ---
 
@@ -172,7 +176,27 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 A map of request header field names and values.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#request_headers DataHttp#request_headers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#request_headers DataHttp#request_headers}
+
+---
+
+##### `request_timeout_ms`<sup>Optional</sup> <a name="request_timeout_ms" id="@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.requestTimeoutMs"></a>
+
+- *Type:* typing.Union[int, float]
+
+The request timeout in milliseconds.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#request_timeout_ms DataHttp#request_timeout_ms}
+
+---
+
+##### `retry`<sup>Optional</sup> <a name="retry" id="@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.retry"></a>
+
+- *Type:* <a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a>
+
+retry block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#retry DataHttp#retry}
 
 ---
 
@@ -196,11 +220,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.getStringAttribute">get_string_attribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.getStringMapAttribute">get_string_map_attribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.putRetry">put_retry</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.resetCaCertPem">reset_ca_cert_pem</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.resetInsecure">reset_insecure</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.resetMethod">reset_method</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.resetRequestBody">reset_request_body</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.resetRequestHeaders">reset_request_headers</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.resetRequestTimeoutMs">reset_request_timeout_ms</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.resetRetry">reset_retry</a></code> | *No description.* |
 
 ---
 
@@ -413,6 +440,48 @@ def interpolation_for_attribute(
 
 ---
 
+##### `put_retry` <a name="put_retry" id="@cdktf/provider-http.dataHttp.DataHttp.putRetry"></a>
+
+```python
+def put_retry(
+  attempts: typing.Union[int, float] = None,
+  max_delay_ms: typing.Union[int, float] = None,
+  min_delay_ms: typing.Union[int, float] = None
+) -> None
+```
+
+###### `attempts`<sup>Optional</sup> <a name="attempts" id="@cdktf/provider-http.dataHttp.DataHttp.putRetry.parameter.attempts"></a>
+
+- *Type:* typing.Union[int, float]
+
+The number of times the request is to be retried.
+
+For example, if 2 is specified, the request will be tried a maximum of 3 times.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#attempts DataHttp#attempts}
+
+---
+
+###### `max_delay_ms`<sup>Optional</sup> <a name="max_delay_ms" id="@cdktf/provider-http.dataHttp.DataHttp.putRetry.parameter.maxDelayMs"></a>
+
+- *Type:* typing.Union[int, float]
+
+The maximum delay between retry requests in milliseconds.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#max_delay_ms DataHttp#max_delay_ms}
+
+---
+
+###### `min_delay_ms`<sup>Optional</sup> <a name="min_delay_ms" id="@cdktf/provider-http.dataHttp.DataHttp.putRetry.parameter.minDelayMs"></a>
+
+- *Type:* typing.Union[int, float]
+
+The minimum delay between retry requests in milliseconds.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#min_delay_ms DataHttp#min_delay_ms}
+
+---
+
 ##### `reset_ca_cert_pem` <a name="reset_ca_cert_pem" id="@cdktf/provider-http.dataHttp.DataHttp.resetCaCertPem"></a>
 
 ```python
@@ -441,6 +510,18 @@ def reset_request_body() -> None
 
 ```python
 def reset_request_headers() -> None
+```
+
+##### `reset_request_timeout_ms` <a name="reset_request_timeout_ms" id="@cdktf/provider-http.dataHttp.DataHttp.resetRequestTimeoutMs"></a>
+
+```python
+def reset_request_timeout_ms() -> None
+```
+
+##### `reset_retry` <a name="reset_retry" id="@cdktf/provider-http.dataHttp.DataHttp.resetRetry"></a>
+
+```python
+def reset_retry() -> None
 ```
 
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
@@ -539,18 +620,22 @@ dataHttp.DataHttp.is_terraform_data_source(
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.responseBody">response_body</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.responseHeaders">response_headers</a></code> | <code>cdktf.StringMap</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.retry">retry</a></code> | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference">DataHttpRetryOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.statusCode">status_code</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.caCertPemInput">ca_cert_pem_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.insecureInput">insecure_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.methodInput">method_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestBodyInput">request_body_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestHeadersInput">request_headers_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestTimeoutMsInput">request_timeout_ms_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.retryInput">retry_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a>, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.urlInput">url_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.caCertPem">ca_cert_pem</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.insecure">insecure</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.method">method</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestBody">request_body</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestHeaders">request_headers</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestTimeoutMs">request_timeout_ms</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.url">url</a></code> | <code>str</code> | *No description.* |
 
 ---
@@ -717,6 +802,16 @@ response_headers: StringMap
 
 ---
 
+##### `retry`<sup>Required</sup> <a name="retry" id="@cdktf/provider-http.dataHttp.DataHttp.property.retry"></a>
+
+```python
+retry: DataHttpRetryOutputReference
+```
+
+- *Type:* <a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference">DataHttpRetryOutputReference</a>
+
+---
+
 ##### `status_code`<sup>Required</sup> <a name="status_code" id="@cdktf/provider-http.dataHttp.DataHttp.property.statusCode"></a>
 
 ```python
@@ -774,6 +869,26 @@ request_headers_input: typing.Mapping[str]
 ```
 
 - *Type:* typing.Mapping[str]
+
+---
+
+##### `request_timeout_ms_input`<sup>Optional</sup> <a name="request_timeout_ms_input" id="@cdktf/provider-http.dataHttp.DataHttp.property.requestTimeoutMsInput"></a>
+
+```python
+request_timeout_ms_input: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+---
+
+##### `retry_input`<sup>Optional</sup> <a name="retry_input" id="@cdktf/provider-http.dataHttp.DataHttp.property.retryInput"></a>
+
+```python
+retry_input: typing.Union[DataHttpRetry, IResolvable]
+```
+
+- *Type:* typing.Union[<a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a>, cdktf.IResolvable]
 
 ---
 
@@ -837,6 +952,16 @@ request_headers: typing.Mapping[str]
 
 ---
 
+##### `request_timeout_ms`<sup>Required</sup> <a name="request_timeout_ms" id="@cdktf/provider-http.dataHttp.DataHttp.property.requestTimeoutMs"></a>
+
+```python
+request_timeout_ms: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+---
+
 ##### `url`<sup>Required</sup> <a name="url" id="@cdktf/provider-http.dataHttp.DataHttp.property.url"></a>
 
 ```python
@@ -887,7 +1012,9 @@ dataHttp.DataHttpConfig(
   insecure: typing.Union[bool, IResolvable] = None,
   method: str = None,
   request_body: str = None,
-  request_headers: typing.Mapping[str] = None
+  request_headers: typing.Mapping[str] = None,
+  request_timeout_ms: typing.Union[int, float] = None,
+  retry: DataHttpRetry = None
 )
 ```
 
@@ -908,6 +1035,8 @@ dataHttp.DataHttpConfig(
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.method">method</a></code> | <code>str</code> | The HTTP Method for the request. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.requestBody">request_body</a></code> | <code>str</code> | The request body as a string. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.requestHeaders">request_headers</a></code> | <code>typing.Mapping[str]</code> | A map of request header field names and values. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.requestTimeoutMs">request_timeout_ms</a></code> | <code>typing.Union[int, float]</code> | The request timeout in milliseconds. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.retry">retry</a></code> | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a></code> | retry block. |
 
 ---
 
@@ -991,7 +1120,7 @@ url: str
 
 The URL for the request. Supported schemes are `http` and `https`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#url DataHttp#url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#url DataHttp#url}
 
 ---
 
@@ -1005,7 +1134,7 @@ ca_cert_pem: str
 
 Certificate data of the Certificate Authority (CA) in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#ca_cert_pem DataHttp#ca_cert_pem}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#ca_cert_pem DataHttp#ca_cert_pem}
 
 ---
 
@@ -1019,7 +1148,7 @@ insecure: typing.Union[bool, IResolvable]
 
 Disables verification of the server's certificate chain and hostname. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#insecure DataHttp#insecure}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#insecure DataHttp#insecure}
 
 ---
 
@@ -1035,7 +1164,7 @@ The HTTP Method for the request.
 
 Allowed methods are a subset of methods defined in [RFC7231](https://datatracker.ietf.org/doc/html/rfc7231#section-4.3) namely, `GET`, `HEAD`, and `POST`. `POST` support is only intended for read-only URLs, such as submitting a search.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#method DataHttp#method}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#method DataHttp#method}
 
 ---
 
@@ -1049,7 +1178,7 @@ request_body: str
 
 The request body as a string.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#request_body DataHttp#request_body}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#request_body DataHttp#request_body}
 
 ---
 
@@ -1063,7 +1192,465 @@ request_headers: typing.Mapping[str]
 
 A map of request header field names and values.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http#request_headers DataHttp#request_headers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#request_headers DataHttp#request_headers}
+
+---
+
+##### `request_timeout_ms`<sup>Optional</sup> <a name="request_timeout_ms" id="@cdktf/provider-http.dataHttp.DataHttpConfig.property.requestTimeoutMs"></a>
+
+```python
+request_timeout_ms: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+The request timeout in milliseconds.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#request_timeout_ms DataHttp#request_timeout_ms}
+
+---
+
+##### `retry`<sup>Optional</sup> <a name="retry" id="@cdktf/provider-http.dataHttp.DataHttpConfig.property.retry"></a>
+
+```python
+retry: DataHttpRetry
+```
+
+- *Type:* <a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a>
+
+retry block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#retry DataHttp#retry}
+
+---
+
+### DataHttpRetry <a name="DataHttpRetry" id="@cdktf/provider-http.dataHttp.DataHttpRetry"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-http.dataHttp.DataHttpRetry.Initializer"></a>
+
+```python
+from cdktf_cdktf_provider_http import data_http
+
+dataHttp.DataHttpRetry(
+  attempts: typing.Union[int, float] = None,
+  max_delay_ms: typing.Union[int, float] = None,
+  min_delay_ms: typing.Union[int, float] = None
+)
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetry.property.attempts">attempts</a></code> | <code>typing.Union[int, float]</code> | The number of times the request is to be retried. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetry.property.maxDelayMs">max_delay_ms</a></code> | <code>typing.Union[int, float]</code> | The maximum delay between retry requests in milliseconds. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetry.property.minDelayMs">min_delay_ms</a></code> | <code>typing.Union[int, float]</code> | The minimum delay between retry requests in milliseconds. |
+
+---
+
+##### `attempts`<sup>Optional</sup> <a name="attempts" id="@cdktf/provider-http.dataHttp.DataHttpRetry.property.attempts"></a>
+
+```python
+attempts: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+The number of times the request is to be retried.
+
+For example, if 2 is specified, the request will be tried a maximum of 3 times.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#attempts DataHttp#attempts}
+
+---
+
+##### `max_delay_ms`<sup>Optional</sup> <a name="max_delay_ms" id="@cdktf/provider-http.dataHttp.DataHttpRetry.property.maxDelayMs"></a>
+
+```python
+max_delay_ms: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+The maximum delay between retry requests in milliseconds.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#max_delay_ms DataHttp#max_delay_ms}
+
+---
+
+##### `min_delay_ms`<sup>Optional</sup> <a name="min_delay_ms" id="@cdktf/provider-http.dataHttp.DataHttpRetry.property.minDelayMs"></a>
+
+```python
+min_delay_ms: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+The minimum delay between retry requests in milliseconds.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#min_delay_ms DataHttp#min_delay_ms}
+
+---
+
+## Classes <a name="Classes" id="Classes"></a>
+
+### DataHttpRetryOutputReference <a name="DataHttpRetryOutputReference" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.Initializer"></a>
+
+```python
+from cdktf_cdktf_provider_http import data_http
+
+dataHttp.DataHttpRetryOutputReference(
+  terraform_resource: IInterpolatingParent,
+  terraform_attribute: str
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.computeFqn">compute_fqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getAnyMapAttribute">get_any_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getBooleanAttribute">get_boolean_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getBooleanMapAttribute">get_boolean_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getListAttribute">get_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getNumberAttribute">get_number_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getNumberListAttribute">get_number_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getNumberMapAttribute">get_number_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getStringAttribute">get_string_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getStringMapAttribute">get_string_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.resetAttempts">reset_attempts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.resetMaxDelayMs">reset_max_delay_ms</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.resetMinDelayMs">reset_min_delay_ms</a></code> | *No description.* |
+
+---
+
+##### `compute_fqn` <a name="compute_fqn" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.computeFqn"></a>
+
+```python
+def compute_fqn() -> str
+```
+
+##### `get_any_map_attribute` <a name="get_any_map_attribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getAnyMapAttribute"></a>
+
+```python
+def get_any_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Any]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_attribute` <a name="get_boolean_attribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getBooleanAttribute"></a>
+
+```python
+def get_boolean_attribute(
+  terraform_attribute: str
+) -> IResolvable
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_map_attribute` <a name="get_boolean_map_attribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getBooleanMapAttribute"></a>
+
+```python
+def get_boolean_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[bool]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_list_attribute` <a name="get_list_attribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getListAttribute"></a>
+
+```python
+def get_list_attribute(
+  terraform_attribute: str
+) -> typing.List[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_attribute` <a name="get_number_attribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getNumberAttribute"></a>
+
+```python
+def get_number_attribute(
+  terraform_attribute: str
+) -> typing.Union[int, float]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_list_attribute` <a name="get_number_list_attribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getNumberListAttribute"></a>
+
+```python
+def get_number_list_attribute(
+  terraform_attribute: str
+) -> typing.List[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_map_attribute` <a name="get_number_map_attribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getNumberMapAttribute"></a>
+
+```python
+def get_number_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_attribute` <a name="get_string_attribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getStringAttribute"></a>
+
+```python
+def get_string_attribute(
+  terraform_attribute: str
+) -> str
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_map_attribute` <a name="get_string_map_attribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getStringMapAttribute"></a>
+
+```python
+def get_string_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `interpolation_for_attribute` <a name="interpolation_for_attribute" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.interpolationForAttribute"></a>
+
+```python
+def interpolation_for_attribute(
+  property: str
+) -> IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* str
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.resolve"></a>
+
+```python
+def resolve(
+  _context: IResolveContext
+) -> typing.Any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `to_string` <a name="to_string" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `reset_attempts` <a name="reset_attempts" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.resetAttempts"></a>
+
+```python
+def reset_attempts() -> None
+```
+
+##### `reset_max_delay_ms` <a name="reset_max_delay_ms" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.resetMaxDelayMs"></a>
+
+```python
+def reset_max_delay_ms() -> None
+```
+
+##### `reset_min_delay_ms` <a name="reset_min_delay_ms" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.resetMinDelayMs"></a>
+
+```python
+def reset_min_delay_ms() -> None
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.attemptsInput">attempts_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.maxDelayMsInput">max_delay_ms_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.minDelayMsInput">min_delay_ms_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.attempts">attempts</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.maxDelayMs">max_delay_ms</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.minDelayMs">min_delay_ms</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a>, cdktf.IResolvable]</code> | *No description.* |
+
+---
+
+##### `creation_stack`<sup>Required</sup> <a name="creation_stack" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.creationStack"></a>
+
+```python
+creation_stack: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+---
+
+##### `attempts_input`<sup>Optional</sup> <a name="attempts_input" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.attemptsInput"></a>
+
+```python
+attempts_input: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+---
+
+##### `max_delay_ms_input`<sup>Optional</sup> <a name="max_delay_ms_input" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.maxDelayMsInput"></a>
+
+```python
+max_delay_ms_input: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+---
+
+##### `min_delay_ms_input`<sup>Optional</sup> <a name="min_delay_ms_input" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.minDelayMsInput"></a>
+
+```python
+min_delay_ms_input: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+---
+
+##### `attempts`<sup>Required</sup> <a name="attempts" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.attempts"></a>
+
+```python
+attempts: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+---
+
+##### `max_delay_ms`<sup>Required</sup> <a name="max_delay_ms" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.maxDelayMs"></a>
+
+```python
+max_delay_ms: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+---
+
+##### `min_delay_ms`<sup>Required</sup> <a name="min_delay_ms" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.minDelayMs"></a>
+
+```python
+min_delay_ms: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+---
+
+##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.internalValue"></a>
+
+```python
+internal_value: typing.Union[DataHttpRetry, IResolvable]
+```
+
+- *Type:* typing.Union[<a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a>, cdktf.IResolvable]
 
 ---
 
