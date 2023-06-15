@@ -417,7 +417,7 @@ dataHttp.DataHttp.isTerraformDataSource(x: any)
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestBodyInput">requestBodyInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestHeadersInput">requestHeadersInput</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestTimeoutMsInput">requestTimeoutMsInput</a></code> | <code>number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.retryInput">retryInput</a></code> | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.retryInput">retryInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.urlInput">urlInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.caCertPem">caCertPem</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.insecure">insecure</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
@@ -674,10 +674,10 @@ public readonly requestTimeoutMsInput: number;
 ##### `retryInput`<sup>Optional</sup> <a name="retryInput" id="@cdktf/provider-http.dataHttp.DataHttp.property.retryInput"></a>
 
 ```typescript
-public readonly retryInput: DataHttpRetry | IResolvable;
+public readonly retryInput: IResolvable | DataHttpRetry;
 ```
 
-- *Type:* <a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a>
 
 ---
 
@@ -1300,7 +1300,7 @@ public resetMinDelayMs(): void
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.attempts">attempts</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.maxDelayMs">maxDelayMs</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.minDelayMs">minDelayMs</a></code> | <code>number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a></code> | *No description.* |
 
 ---
 
@@ -1391,10 +1391,10 @@ public readonly minDelayMs: number;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: DataHttpRetry | IResolvable;
+public readonly internalValue: IResolvable | DataHttpRetry;
 ```
 
-- *Type:* <a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a>
 
 ---
 

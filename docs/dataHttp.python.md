@@ -628,7 +628,7 @@ dataHttp.DataHttp.is_terraform_data_source(
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestBodyInput">request_body_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestHeadersInput">request_headers_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestTimeoutMsInput">request_timeout_ms_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.retryInput">retry_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.retryInput">retry_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.urlInput">url_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.caCertPem">ca_cert_pem</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.insecure">insecure</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
@@ -885,10 +885,10 @@ request_timeout_ms_input: typing.Union[int, float]
 ##### `retry_input`<sup>Optional</sup> <a name="retry_input" id="@cdktf/provider-http.dataHttp.DataHttp.property.retryInput"></a>
 
 ```python
-retry_input: typing.Union[DataHttpRetry, IResolvable]
+retry_input: typing.Union[IResolvable, DataHttpRetry]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a>]
 
 ---
 
@@ -1556,7 +1556,7 @@ def reset_min_delay_ms() -> None
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.attempts">attempts</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.maxDelayMs">max_delay_ms</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.minDelayMs">min_delay_ms</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a>]</code> | *No description.* |
 
 ---
 
@@ -1647,10 +1647,10 @@ min_delay_ms: typing.Union[int, float]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[DataHttpRetry, IResolvable]
+internal_value: typing.Union[IResolvable, DataHttpRetry]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a>]
 
 ---
 
