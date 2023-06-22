@@ -1,6 +1,6 @@
 # `data_http`
 
-Refer to the Terraform Registory for docs: [`data_http`](https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http).
+Refer to the Terraform Registory for docs: [`data_http`](https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs/data-sources/http).
 
 # `dataHttp` Submodule <a name="`dataHttp` Submodule" id="@cdktf/provider-http.dataHttp"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_http`](https://registry.terraf
 
 ### DataHttp <a name="DataHttp" id="@cdktf/provider-http.dataHttp.DataHttp"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http http}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs/data-sources/http http}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-http.dataHttp.DataHttp.Initializer"></a>
 
@@ -408,6 +408,7 @@ dataHttp.DataHttp.isTerraformDataSource(x: any)
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.body">body</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.responseBody">responseBody</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.responseBodyBase64">responseBodyBase64</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.responseHeaders">responseHeaders</a></code> | <code>cdktf.StringMap</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.retry">retry</a></code> | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference">DataHttpRetryOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.statusCode">statusCode</a></code> | <code>number</code> | *No description.* |
@@ -575,6 +576,16 @@ public readonly id: string;
 
 ```typescript
 public readonly responseBody: string;
+```
+
+- *Type:* string
+
+---
+
+##### `responseBodyBase64`<sup>Required</sup> <a name="responseBodyBase64" id="@cdktf/provider-http.dataHttp.DataHttp.property.responseBodyBase64"></a>
+
+```typescript
+public readonly responseBodyBase64: string;
 ```
 
 - *Type:* string
@@ -893,7 +904,7 @@ public readonly url: string;
 
 The URL for the request. Supported schemes are `http` and `https`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#url DataHttp#url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs/data-sources/http#url DataHttp#url}
 
 ---
 
@@ -907,7 +918,7 @@ public readonly caCertPem: string;
 
 Certificate data of the Certificate Authority (CA) in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#ca_cert_pem DataHttp#ca_cert_pem}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs/data-sources/http#ca_cert_pem DataHttp#ca_cert_pem}
 
 ---
 
@@ -921,7 +932,7 @@ public readonly insecure: boolean | IResolvable;
 
 Disables verification of the server's certificate chain and hostname. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#insecure DataHttp#insecure}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs/data-sources/http#insecure DataHttp#insecure}
 
 ---
 
@@ -937,7 +948,7 @@ The HTTP Method for the request.
 
 Allowed methods are a subset of methods defined in [RFC7231](https://datatracker.ietf.org/doc/html/rfc7231#section-4.3) namely, `GET`, `HEAD`, and `POST`. `POST` support is only intended for read-only URLs, such as submitting a search.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#method DataHttp#method}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs/data-sources/http#method DataHttp#method}
 
 ---
 
@@ -951,7 +962,7 @@ public readonly requestBody: string;
 
 The request body as a string.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#request_body DataHttp#request_body}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs/data-sources/http#request_body DataHttp#request_body}
 
 ---
 
@@ -965,7 +976,7 @@ public readonly requestHeaders: {[ key: string ]: string};
 
 A map of request header field names and values.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#request_headers DataHttp#request_headers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs/data-sources/http#request_headers DataHttp#request_headers}
 
 ---
 
@@ -979,7 +990,7 @@ public readonly requestTimeoutMs: number;
 
 The request timeout in milliseconds.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#request_timeout_ms DataHttp#request_timeout_ms}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs/data-sources/http#request_timeout_ms DataHttp#request_timeout_ms}
 
 ---
 
@@ -993,7 +1004,7 @@ public readonly retry: DataHttpRetry;
 
 retry block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#retry DataHttp#retry}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs/data-sources/http#retry DataHttp#retry}
 
 ---
 
@@ -1029,7 +1040,7 @@ The number of times the request is to be retried.
 
 For example, if 2 is specified, the request will be tried a maximum of 3 times.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#attempts DataHttp#attempts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs/data-sources/http#attempts DataHttp#attempts}
 
 ---
 
@@ -1043,7 +1054,7 @@ public readonly maxDelayMs: number;
 
 The maximum delay between retry requests in milliseconds.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#max_delay_ms DataHttp#max_delay_ms}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs/data-sources/http#max_delay_ms DataHttp#max_delay_ms}
 
 ---
 
@@ -1057,7 +1068,7 @@ public readonly minDelayMs: number;
 
 The minimum delay between retry requests in milliseconds.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs/data-sources/http#min_delay_ms DataHttp#min_delay_ms}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs/data-sources/http#min_delay_ms DataHttp#min_delay_ms}
 
 ---
 
