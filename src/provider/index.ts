@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs
+// https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,13 +10,13 @@ export interface HttpProviderConfig {
   /**
   * Alias name
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs#alias HttpProvider#alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs#alias HttpProvider#alias}
   */
   readonly alias?: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs http}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs http}
 */
 export class HttpProvider extends cdktf.TerraformProvider {
 
@@ -35,7 +30,7 @@ export class HttpProvider extends cdktf.TerraformProvider {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/http/3.3.0/docs http} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs http} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -46,7 +41,7 @@ export class HttpProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'http',
       terraformGeneratorMetadata: {
         providerName: 'http',
-        providerVersion: '3.3.0',
+        providerVersion: '3.4.0',
         providerVersionConstraint: '~> 3.1'
       },
       terraformProviderSource: 'http'
