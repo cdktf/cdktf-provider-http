@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs/data-sources/http
 // generated from terraform resource schema
 
@@ -14,49 +9,49 @@ import * as cdktf from 'cdktf';
 export interface DataHttpConfig extends cdktf.TerraformMetaArguments {
   /**
   * Certificate data of the Certificate Authority (CA) in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs/data-sources/http#ca_cert_pem DataHttp#ca_cert_pem}
   */
   readonly caCertPem?: string;
   /**
   * Disables verification of the server's certificate chain and hostname. Defaults to `false`
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs/data-sources/http#insecure DataHttp#insecure}
   */
   readonly insecure?: boolean | cdktf.IResolvable;
   /**
   * The HTTP Method for the request. Allowed methods are a subset of methods defined in [RFC7231](https://datatracker.ietf.org/doc/html/rfc7231#section-4.3) namely, `GET`, `HEAD`, and `POST`. `POST` support is only intended for read-only URLs, such as submitting a search.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs/data-sources/http#method DataHttp#method}
   */
   readonly method?: string;
   /**
   * The request body as a string.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs/data-sources/http#request_body DataHttp#request_body}
   */
   readonly requestBody?: string;
   /**
   * A map of request header field names and values.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs/data-sources/http#request_headers DataHttp#request_headers}
   */
   readonly requestHeaders?: { [key: string]: string };
   /**
   * The request timeout in milliseconds.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs/data-sources/http#request_timeout_ms DataHttp#request_timeout_ms}
   */
   readonly requestTimeoutMs?: number;
   /**
   * The URL for the request. Supported schemes are `http` and `https`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs/data-sources/http#url DataHttp#url}
   */
   readonly url: string;
   /**
   * retry block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs/data-sources/http#retry DataHttp#retry}
   */
   readonly retry?: DataHttpRetry;
@@ -64,19 +59,19 @@ export interface DataHttpConfig extends cdktf.TerraformMetaArguments {
 export interface DataHttpRetry {
   /**
   * The number of times the request is to be retried. For example, if 2 is specified, the request will be tried a maximum of 3 times.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs/data-sources/http#attempts DataHttp#attempts}
   */
   readonly attempts?: number;
   /**
   * The maximum delay between retry requests in milliseconds.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs/data-sources/http#max_delay_ms DataHttp#max_delay_ms}
   */
   readonly maxDelayMs?: number;
   /**
   * The minimum delay between retry requests in milliseconds.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs/data-sources/http#min_delay_ms DataHttp#min_delay_ms}
   */
   readonly minDelayMs?: number;
