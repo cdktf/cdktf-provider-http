@@ -1,7 +1,9 @@
 
-# Terraform CDK http Provider ~> 3.1
+# Terraform CDK http Provider tracks ~> 3.1
 
 This repo builds and publishes the Terraform http Provider bindings for [CDK for Terraform](https://cdk.tf).
+
+Is based directly on http 3.4.0
 
 ## Available Packages
 
@@ -61,7 +63,7 @@ This project is explicitly not tracking the Terraform http Provider version 1:1.
 These are the upstream dependencies:
 
 - [Terraform CDK](https://cdk.tf)
-- [Terraform http Provider](https://registry.terraform.io/providers/hashicorp/http/3.1.0)
+- [Terraform http Provider](https://registry.terraform.io/providers/hashicorp/http/3.4.0)
     - This links to the minimum version being tracked, you can find the latest released version [in our releases](https://github.com/cdktf/cdktf-provider-http/releases)
 - [Terraform Engine](https://terraform.io)
 
