@@ -1,7 +1,3 @@
-# `provider`
-
-Refer to the Terraform Registory for docs: [`http`](https://registry.terraform.io/providers/hashicorp/http/3.4.0/docs).
-
 # `provider` Submodule <a name="`provider` Submodule" id="@cdktf/provider-http.provider"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.4.0
 #### Initializers <a name="Initializers" id="@cdktf/provider-http.provider.HttpProvider.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-http-go/http/v8/provider"
+import "github.com/cdktf/cdktf-provider-http-go/http/provider"
 
 provider.NewHttpProvider(scope Construct, id *string, config HttpProviderConfig) HttpProvider
 ```
@@ -148,7 +144,7 @@ func ResetAlias()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-http.provider.HttpProvider.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-http-go/http/v8/provider"
+import "github.com/cdktf/cdktf-provider-http-go/http/provider"
 
 provider.HttpProvider_IsConstruct(x interface{}) *bool
 ```
@@ -180,7 +176,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-http.provider.HttpProvider.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-http-go/http/v8/provider"
+import "github.com/cdktf/cdktf-provider-http-go/http/provider"
 
 provider.HttpProvider_IsTerraformElement(x interface{}) *bool
 ```
@@ -194,7 +190,7 @@ provider.HttpProvider_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformProvider` <a name="IsTerraformProvider" id="@cdktf/provider-http.provider.HttpProvider.isTerraformProvider"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-http-go/http/v8/provider"
+import "github.com/cdktf/cdktf-provider-http-go/http/provider"
 
 provider.HttpProvider_IsTerraformProvider(x interface{}) *bool
 ```
@@ -208,7 +204,7 @@ provider.HttpProvider_IsTerraformProvider(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-http.provider.HttpProvider.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-http-go/http/v8/provider"
+import "github.com/cdktf/cdktf-provider-http-go/http/provider"
 
 provider.HttpProvider_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -393,7 +389,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-http.provider.HttpProviderConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-http-go/http/v8/provider"
+import "github.com/cdktf/cdktf-provider-http-go/http/provider"
 
 &provider.HttpProviderConfig {
 	Alias: *string,
