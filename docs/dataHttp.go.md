@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.4.0
 #### Initializers <a name="Initializers" id="@cdktf/provider-http.dataHttp.DataHttp.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-http-go/http/datahttp"
+import "github.com/cdktf/cdktf-provider-http-go/http/v8/datahttp"
 
 datahttp.NewDataHttp(scope Construct, id *string, config DataHttpConfig) DataHttp
 ```
@@ -329,7 +329,7 @@ func ResetRetry()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-http.dataHttp.DataHttp.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-http-go/http/datahttp"
+import "github.com/cdktf/cdktf-provider-http-go/http/v8/datahttp"
 
 datahttp.DataHttp_IsConstruct(x interface{}) *bool
 ```
@@ -361,7 +361,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-http.dataHttp.DataHttp.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-http-go/http/datahttp"
+import "github.com/cdktf/cdktf-provider-http-go/http/v8/datahttp"
 
 datahttp.DataHttp_IsTerraformElement(x interface{}) *bool
 ```
@@ -375,7 +375,7 @@ datahttp.DataHttp_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-http.dataHttp.DataHttp.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-http-go/http/datahttp"
+import "github.com/cdktf/cdktf-provider-http-go/http/v8/datahttp"
 
 datahttp.DataHttp_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -389,7 +389,7 @@ datahttp.DataHttp_IsTerraformDataSource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-http.dataHttp.DataHttp.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-http-go/http/datahttp"
+import "github.com/cdktf/cdktf-provider-http-go/http/v8/datahttp"
 
 datahttp.DataHttp_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -838,7 +838,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-http.dataHttp.DataHttpConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-http-go/http/datahttp"
+import "github.com/cdktf/cdktf-provider-http-go/http/v8/datahttp"
 
 &datahttp.DataHttpConfig {
 	Connection: interface{},
@@ -855,7 +855,7 @@ import "github.com/cdktf/cdktf-provider-http-go/http/datahttp"
 	RequestBody: *string,
 	RequestHeaders: *map[string]*string,
 	RequestTimeoutMs: *f64,
-	Retry: github.com/cdktf/cdktf-provider-http-go/http.dataHttp.DataHttpRetry,
+	Retry: github.com/cdktf/cdktf-provider-http-go/http/v8.dataHttp.DataHttpRetry,
 }
 ```
 
@@ -1070,7 +1070,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-http.dataHttp.DataHttpRetry.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-http-go/http/datahttp"
+import "github.com/cdktf/cdktf-provider-http-go/http/v8/datahttp"
 
 &datahttp.DataHttpRetry {
 	Attempts: *f64,
@@ -1140,7 +1140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-http-go/http/datahttp"
+import "github.com/cdktf/cdktf-provider-http-go/http/v8/datahttp"
 
 datahttp.NewDataHttpRetryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataHttpRetryOutputReference
 ```
