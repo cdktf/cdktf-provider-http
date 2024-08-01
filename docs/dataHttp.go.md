@@ -4,12 +4,12 @@
 
 ### DataHttp <a name="DataHttp" id="@cdktf/provider-http.dataHttp.DataHttp"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.4.3/docs/data-sources/http http}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.4.4/docs/data-sources/http http}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-http.dataHttp.DataHttp.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-http-go/http/v9/datahttp"
+import "github.com/cdktf/cdktf-provider-http-go/http/datahttp"
 
 datahttp.NewDataHttp(scope Construct, id *string, config DataHttpConfig) DataHttp
 ```
@@ -338,7 +338,7 @@ func ResetRetry()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-http.dataHttp.DataHttp.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-http-go/http/v9/datahttp"
+import "github.com/cdktf/cdktf-provider-http-go/http/datahttp"
 
 datahttp.DataHttp_IsConstruct(x interface{}) *bool
 ```
@@ -370,7 +370,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-http.dataHttp.DataHttp.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-http-go/http/v9/datahttp"
+import "github.com/cdktf/cdktf-provider-http-go/http/datahttp"
 
 datahttp.DataHttp_IsTerraformElement(x interface{}) *bool
 ```
@@ -384,7 +384,7 @@ datahttp.DataHttp_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-http.dataHttp.DataHttp.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-http-go/http/v9/datahttp"
+import "github.com/cdktf/cdktf-provider-http-go/http/datahttp"
 
 datahttp.DataHttp_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -398,7 +398,7 @@ datahttp.DataHttp_IsTerraformDataSource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-http.dataHttp.DataHttp.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-http-go/http/v9/datahttp"
+import "github.com/cdktf/cdktf-provider-http-go/http/datahttp"
 
 datahttp.DataHttp_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -427,7 +427,7 @@ The construct id used in the generated config for the DataHttp to import.
 
 The id of the existing DataHttp that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/http/3.4.3/docs/data-sources/http#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/http/3.4.4/docs/data-sources/http#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -847,7 +847,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-http.dataHttp.DataHttpConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-http-go/http/v9/datahttp"
+import "github.com/cdktf/cdktf-provider-http-go/http/datahttp"
 
 &datahttp.DataHttpConfig {
 	Connection: interface{},
@@ -864,7 +864,7 @@ import "github.com/cdktf/cdktf-provider-http-go/http/v9/datahttp"
 	RequestBody: *string,
 	RequestHeaders: *map[string]*string,
 	RequestTimeoutMs: *f64,
-	Retry: github.com/cdktf/cdktf-provider-http-go/http/v9.dataHttp.DataHttpRetry,
+	Retry: github.com/cdktf/cdktf-provider-http-go/http.dataHttp.DataHttpRetry,
 }
 ```
 
@@ -970,7 +970,7 @@ Url *string
 
 The URL for the request. Supported schemes are `http` and `https`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.3/docs/data-sources/http#url DataHttp#url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.4/docs/data-sources/http#url DataHttp#url}
 
 ---
 
@@ -984,7 +984,7 @@ CaCertPem *string
 
 Certificate data of the Certificate Authority (CA) in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.3/docs/data-sources/http#ca_cert_pem DataHttp#ca_cert_pem}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.4/docs/data-sources/http#ca_cert_pem DataHttp#ca_cert_pem}
 
 ---
 
@@ -998,7 +998,7 @@ Insecure interface{}
 
 Disables verification of the server's certificate chain and hostname. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.3/docs/data-sources/http#insecure DataHttp#insecure}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.4/docs/data-sources/http#insecure DataHttp#insecure}
 
 ---
 
@@ -1014,7 +1014,7 @@ The HTTP Method for the request.
 
 Allowed methods are a subset of methods defined in [RFC7231](https://datatracker.ietf.org/doc/html/rfc7231#section-4.3) namely, `GET`, `HEAD`, and `POST`. `POST` support is only intended for read-only URLs, such as submitting a search.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.3/docs/data-sources/http#method DataHttp#method}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.4/docs/data-sources/http#method DataHttp#method}
 
 ---
 
@@ -1028,7 +1028,7 @@ RequestBody *string
 
 The request body as a string.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.3/docs/data-sources/http#request_body DataHttp#request_body}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.4/docs/data-sources/http#request_body DataHttp#request_body}
 
 ---
 
@@ -1042,7 +1042,7 @@ RequestHeaders *map[string]*string
 
 A map of request header field names and values.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.3/docs/data-sources/http#request_headers DataHttp#request_headers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.4/docs/data-sources/http#request_headers DataHttp#request_headers}
 
 ---
 
@@ -1056,7 +1056,7 @@ RequestTimeoutMs *f64
 
 The request timeout in milliseconds.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.3/docs/data-sources/http#request_timeout_ms DataHttp#request_timeout_ms}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.4/docs/data-sources/http#request_timeout_ms DataHttp#request_timeout_ms}
 
 ---
 
@@ -1070,7 +1070,7 @@ Retry DataHttpRetry
 
 retry block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.3/docs/data-sources/http#retry DataHttp#retry}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.4/docs/data-sources/http#retry DataHttp#retry}
 
 ---
 
@@ -1079,7 +1079,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-http.dataHttp.DataHttpRetry.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-http-go/http/v9/datahttp"
+import "github.com/cdktf/cdktf-provider-http-go/http/datahttp"
 
 &datahttp.DataHttpRetry {
 	Attempts: *f64,
@@ -1110,7 +1110,7 @@ The number of times the request is to be retried.
 
 For example, if 2 is specified, the request will be tried a maximum of 3 times.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.3/docs/data-sources/http#attempts DataHttp#attempts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.4/docs/data-sources/http#attempts DataHttp#attempts}
 
 ---
 
@@ -1124,7 +1124,7 @@ MaxDelayMs *f64
 
 The maximum delay between retry requests in milliseconds.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.3/docs/data-sources/http#max_delay_ms DataHttp#max_delay_ms}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.4/docs/data-sources/http#max_delay_ms DataHttp#max_delay_ms}
 
 ---
 
@@ -1138,7 +1138,7 @@ MinDelayMs *f64
 
 The minimum delay between retry requests in milliseconds.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.3/docs/data-sources/http#min_delay_ms DataHttp#min_delay_ms}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.4/docs/data-sources/http#min_delay_ms DataHttp#min_delay_ms}
 
 ---
 
@@ -1149,7 +1149,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-http-go/http/v9/datahttp"
+import "github.com/cdktf/cdktf-provider-http-go/http/datahttp"
 
 datahttp.NewDataHttpRetryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataHttpRetryOutputReference
 ```
