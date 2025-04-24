@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/http/3.4.5/docs/data-sources/http
+// https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,51 +13,63 @@ import * as cdktf from 'cdktf';
 
 export interface DataHttpConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Certificate data of the Certificate Authority (CA) in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format.
+  * Certificate Authority (CA) in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5/docs/data-sources/http#ca_cert_pem DataHttp#ca_cert_pem}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http#ca_cert_pem DataHttp#ca_cert_pem}
   */
   readonly caCertPem?: string;
   /**
+  * Client certificate in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http#client_cert_pem DataHttp#client_cert_pem}
+  */
+  readonly clientCertPem?: string;
+  /**
+  * Client key in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http#client_key_pem DataHttp#client_key_pem}
+  */
+  readonly clientKeyPem?: string;
+  /**
   * Disables verification of the server's certificate chain and hostname. Defaults to `false`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5/docs/data-sources/http#insecure DataHttp#insecure}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http#insecure DataHttp#insecure}
   */
   readonly insecure?: boolean | cdktf.IResolvable;
   /**
   * The HTTP Method for the request. Allowed methods are a subset of methods defined in [RFC7231](https://datatracker.ietf.org/doc/html/rfc7231#section-4.3) namely, `GET`, `HEAD`, and `POST`. `POST` support is only intended for read-only URLs, such as submitting a search.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5/docs/data-sources/http#method DataHttp#method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http#method DataHttp#method}
   */
   readonly method?: string;
   /**
   * The request body as a string.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5/docs/data-sources/http#request_body DataHttp#request_body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http#request_body DataHttp#request_body}
   */
   readonly requestBody?: string;
   /**
   * A map of request header field names and values.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5/docs/data-sources/http#request_headers DataHttp#request_headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http#request_headers DataHttp#request_headers}
   */
   readonly requestHeaders?: { [key: string]: string };
   /**
   * The request timeout in milliseconds.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5/docs/data-sources/http#request_timeout_ms DataHttp#request_timeout_ms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http#request_timeout_ms DataHttp#request_timeout_ms}
   */
   readonly requestTimeoutMs?: number;
   /**
   * The URL for the request. Supported schemes are `http` and `https`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5/docs/data-sources/http#url DataHttp#url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http#url DataHttp#url}
   */
   readonly url: string;
   /**
   * retry block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5/docs/data-sources/http#retry DataHttp#retry}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http#retry DataHttp#retry}
   */
   readonly retry?: DataHttpRetry;
 }
@@ -65,19 +77,19 @@ export interface DataHttpRetry {
   /**
   * The number of times the request is to be retried. For example, if 2 is specified, the request will be tried a maximum of 3 times.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5/docs/data-sources/http#attempts DataHttp#attempts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http#attempts DataHttp#attempts}
   */
   readonly attempts?: number;
   /**
   * The maximum delay between retry requests in milliseconds.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5/docs/data-sources/http#max_delay_ms DataHttp#max_delay_ms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http#max_delay_ms DataHttp#max_delay_ms}
   */
   readonly maxDelayMs?: number;
   /**
   * The minimum delay between retry requests in milliseconds.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5/docs/data-sources/http#min_delay_ms DataHttp#min_delay_ms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http#min_delay_ms DataHttp#min_delay_ms}
   */
   readonly minDelayMs?: number;
 }
@@ -229,7 +241,7 @@ export class DataHttpRetryOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5/docs/data-sources/http http}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http http}
 */
 export class DataHttp extends cdktf.TerraformDataSource {
 
@@ -245,7 +257,7 @@ export class DataHttp extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataHttp resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataHttp to import
-  * @param importFromId The id of the existing DataHttp that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5/docs/data-sources/http#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataHttp that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataHttp to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -257,7 +269,7 @@ export class DataHttp extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5/docs/data-sources/http http} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http http} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -268,7 +280,7 @@ export class DataHttp extends cdktf.TerraformDataSource {
       terraformResourceType: 'http',
       terraformGeneratorMetadata: {
         providerName: 'http',
-        providerVersion: '3.4.5',
+        providerVersion: '3.5.0',
         providerVersionConstraint: '~> 3.1'
       },
       provider: config.provider,
@@ -280,6 +292,8 @@ export class DataHttp extends cdktf.TerraformDataSource {
       forEach: config.forEach
     });
     this._caCertPem = config.caCertPem;
+    this._clientCertPem = config.clientCertPem;
+    this._clientKeyPem = config.clientKeyPem;
     this._insecure = config.insecure;
     this._method = config.method;
     this._requestBody = config.requestBody;
@@ -312,6 +326,38 @@ export class DataHttp extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get caCertPemInput() {
     return this._caCertPem;
+  }
+
+  // client_cert_pem - computed: false, optional: true, required: false
+  private _clientCertPem?: string; 
+  public get clientCertPem() {
+    return this.getStringAttribute('client_cert_pem');
+  }
+  public set clientCertPem(value: string) {
+    this._clientCertPem = value;
+  }
+  public resetClientCertPem() {
+    this._clientCertPem = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientCertPemInput() {
+    return this._clientCertPem;
+  }
+
+  // client_key_pem - computed: false, optional: true, required: false
+  private _clientKeyPem?: string; 
+  public get clientKeyPem() {
+    return this.getStringAttribute('client_key_pem');
+  }
+  public set clientKeyPem(value: string) {
+    this._clientKeyPem = value;
+  }
+  public resetClientKeyPem() {
+    this._clientKeyPem = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientKeyPemInput() {
+    return this._clientKeyPem;
   }
 
   // id - computed: true, optional: false, required: false
@@ -456,6 +502,8 @@ export class DataHttp extends cdktf.TerraformDataSource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       ca_cert_pem: cdktf.stringToTerraform(this._caCertPem),
+      client_cert_pem: cdktf.stringToTerraform(this._clientCertPem),
+      client_key_pem: cdktf.stringToTerraform(this._clientKeyPem),
       insecure: cdktf.booleanToTerraform(this._insecure),
       method: cdktf.stringToTerraform(this._method),
       request_body: cdktf.stringToTerraform(this._requestBody),
@@ -470,6 +518,18 @@ export class DataHttp extends cdktf.TerraformDataSource {
     const attrs = {
       ca_cert_pem: {
         value: cdktf.stringToHclTerraform(this._caCertPem),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      client_cert_pem: {
+        value: cdktf.stringToHclTerraform(this._clientCertPem),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      client_key_pem: {
+        value: cdktf.stringToHclTerraform(this._clientKeyPem),
         isBlock: false,
         type: "simple",
         storageClassType: "string",

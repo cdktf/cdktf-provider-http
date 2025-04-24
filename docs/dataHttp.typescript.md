@@ -4,7 +4,7 @@
 
 ### DataHttp <a name="DataHttp" id="@cdktf/provider-http.dataHttp.DataHttp"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5/docs/data-sources/http http}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http http}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-http.dataHttp.DataHttp.Initializer"></a>
 
@@ -69,6 +69,8 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.putRetry">putRetry</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.resetCaCertPem">resetCaCertPem</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.resetClientCertPem">resetClientCertPem</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.resetClientKeyPem">resetClientKeyPem</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.resetInsecure">resetInsecure</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.resetMethod">resetMethod</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.resetRequestBody">resetRequestBody</a></code> | *No description.* |
@@ -288,6 +290,18 @@ public putRetry(value: DataHttpRetry): void
 public resetCaCertPem(): void
 ```
 
+##### `resetClientCertPem` <a name="resetClientCertPem" id="@cdktf/provider-http.dataHttp.DataHttp.resetClientCertPem"></a>
+
+```typescript
+public resetClientCertPem(): void
+```
+
+##### `resetClientKeyPem` <a name="resetClientKeyPem" id="@cdktf/provider-http.dataHttp.DataHttp.resetClientKeyPem"></a>
+
+```typescript
+public resetClientKeyPem(): void
+```
+
 ##### `resetInsecure` <a name="resetInsecure" id="@cdktf/provider-http.dataHttp.DataHttp.resetInsecure"></a>
 
 ```typescript
@@ -427,7 +441,7 @@ The construct id used in the generated config for the DataHttp to import.
 
 The id of the existing DataHttp that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5/docs/data-sources/http#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -463,6 +477,8 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.retry">retry</a></code> | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference">DataHttpRetryOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.statusCode">statusCode</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.caCertPemInput">caCertPemInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.clientCertPemInput">clientCertPemInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.clientKeyPemInput">clientKeyPemInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.insecureInput">insecureInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.methodInput">methodInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestBodyInput">requestBodyInput</a></code> | <code>string</code> | *No description.* |
@@ -471,6 +487,8 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.retryInput">retryInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.urlInput">urlInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.caCertPem">caCertPem</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.clientCertPem">clientCertPem</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.clientKeyPem">clientKeyPem</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.insecure">insecure</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.method">method</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestBody">requestBody</a></code> | <code>string</code> | *No description.* |
@@ -682,6 +700,26 @@ public readonly caCertPemInput: string;
 
 ---
 
+##### `clientCertPemInput`<sup>Optional</sup> <a name="clientCertPemInput" id="@cdktf/provider-http.dataHttp.DataHttp.property.clientCertPemInput"></a>
+
+```typescript
+public readonly clientCertPemInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `clientKeyPemInput`<sup>Optional</sup> <a name="clientKeyPemInput" id="@cdktf/provider-http.dataHttp.DataHttp.property.clientKeyPemInput"></a>
+
+```typescript
+public readonly clientKeyPemInput: string;
+```
+
+- *Type:* string
+
+---
+
 ##### `insecureInput`<sup>Optional</sup> <a name="insecureInput" id="@cdktf/provider-http.dataHttp.DataHttp.property.insecureInput"></a>
 
 ```typescript
@@ -756,6 +794,26 @@ public readonly urlInput: string;
 
 ```typescript
 public readonly caCertPem: string;
+```
+
+- *Type:* string
+
+---
+
+##### `clientCertPem`<sup>Required</sup> <a name="clientCertPem" id="@cdktf/provider-http.dataHttp.DataHttp.property.clientCertPem"></a>
+
+```typescript
+public readonly clientCertPem: string;
+```
+
+- *Type:* string
+
+---
+
+##### `clientKeyPem`<sup>Required</sup> <a name="clientKeyPem" id="@cdktf/provider-http.dataHttp.DataHttp.property.clientKeyPem"></a>
+
+```typescript
+public readonly clientKeyPem: string;
 ```
 
 - *Type:* string
@@ -864,7 +922,9 @@ const dataHttpConfig: dataHttp.DataHttpConfig = { ... }
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.url">url</a></code> | <code>string</code> | The URL for the request. Supported schemes are `http` and `https`. |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.caCertPem">caCertPem</a></code> | <code>string</code> | Certificate data of the Certificate Authority (CA) in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.caCertPem">caCertPem</a></code> | <code>string</code> | Certificate Authority (CA) in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.clientCertPem">clientCertPem</a></code> | <code>string</code> | Client certificate in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.clientKeyPem">clientKeyPem</a></code> | <code>string</code> | Client key in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.insecure">insecure</a></code> | <code>boolean \| cdktf.IResolvable</code> | Disables verification of the server's certificate chain and hostname. Defaults to `false`. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.method">method</a></code> | <code>string</code> | The HTTP Method for the request. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.requestBody">requestBody</a></code> | <code>string</code> | The request body as a string. |
@@ -954,7 +1014,7 @@ public readonly url: string;
 
 The URL for the request. Supported schemes are `http` and `https`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5/docs/data-sources/http#url DataHttp#url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http#url DataHttp#url}
 
 ---
 
@@ -966,9 +1026,37 @@ public readonly caCertPem: string;
 
 - *Type:* string
 
-Certificate data of the Certificate Authority (CA) in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format.
+Certificate Authority (CA) in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5/docs/data-sources/http#ca_cert_pem DataHttp#ca_cert_pem}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http#ca_cert_pem DataHttp#ca_cert_pem}
+
+---
+
+##### `clientCertPem`<sup>Optional</sup> <a name="clientCertPem" id="@cdktf/provider-http.dataHttp.DataHttpConfig.property.clientCertPem"></a>
+
+```typescript
+public readonly clientCertPem: string;
+```
+
+- *Type:* string
+
+Client certificate in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http#client_cert_pem DataHttp#client_cert_pem}
+
+---
+
+##### `clientKeyPem`<sup>Optional</sup> <a name="clientKeyPem" id="@cdktf/provider-http.dataHttp.DataHttpConfig.property.clientKeyPem"></a>
+
+```typescript
+public readonly clientKeyPem: string;
+```
+
+- *Type:* string
+
+Client key in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http#client_key_pem DataHttp#client_key_pem}
 
 ---
 
@@ -982,7 +1070,7 @@ public readonly insecure: boolean | IResolvable;
 
 Disables verification of the server's certificate chain and hostname. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5/docs/data-sources/http#insecure DataHttp#insecure}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http#insecure DataHttp#insecure}
 
 ---
 
@@ -998,7 +1086,7 @@ The HTTP Method for the request.
 
 Allowed methods are a subset of methods defined in [RFC7231](https://datatracker.ietf.org/doc/html/rfc7231#section-4.3) namely, `GET`, `HEAD`, and `POST`. `POST` support is only intended for read-only URLs, such as submitting a search.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5/docs/data-sources/http#method DataHttp#method}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http#method DataHttp#method}
 
 ---
 
@@ -1012,7 +1100,7 @@ public readonly requestBody: string;
 
 The request body as a string.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5/docs/data-sources/http#request_body DataHttp#request_body}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http#request_body DataHttp#request_body}
 
 ---
 
@@ -1026,7 +1114,7 @@ public readonly requestHeaders: {[ key: string ]: string};
 
 A map of request header field names and values.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5/docs/data-sources/http#request_headers DataHttp#request_headers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http#request_headers DataHttp#request_headers}
 
 ---
 
@@ -1040,7 +1128,7 @@ public readonly requestTimeoutMs: number;
 
 The request timeout in milliseconds.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5/docs/data-sources/http#request_timeout_ms DataHttp#request_timeout_ms}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http#request_timeout_ms DataHttp#request_timeout_ms}
 
 ---
 
@@ -1054,7 +1142,7 @@ public readonly retry: DataHttpRetry;
 
 retry block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5/docs/data-sources/http#retry DataHttp#retry}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http#retry DataHttp#retry}
 
 ---
 
@@ -1090,7 +1178,7 @@ The number of times the request is to be retried.
 
 For example, if 2 is specified, the request will be tried a maximum of 3 times.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5/docs/data-sources/http#attempts DataHttp#attempts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http#attempts DataHttp#attempts}
 
 ---
 
@@ -1104,7 +1192,7 @@ public readonly maxDelayMs: number;
 
 The maximum delay between retry requests in milliseconds.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5/docs/data-sources/http#max_delay_ms DataHttp#max_delay_ms}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http#max_delay_ms DataHttp#max_delay_ms}
 
 ---
 
@@ -1118,7 +1206,7 @@ public readonly minDelayMs: number;
 
 The minimum delay between retry requests in milliseconds.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.4.5/docs/data-sources/http#min_delay_ms DataHttp#min_delay_ms}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0/docs/data-sources/http#min_delay_ms DataHttp#min_delay_ms}
 
 ---
 
