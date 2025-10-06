@@ -12,23 +12,18 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0
 import com.hashicorp.cdktf.providers.http.data_http.DataHttp;
 
 DataHttp.Builder.create(Construct scope, java.lang.String id)
-//  .connection(SSHProvisionerConnection)
-//  .connection(WinrmProvisionerConnection)
-//  .count(java.lang.Number)
-//  .count(TerraformCount)
+//  .connection(SSHProvisionerConnection|WinrmProvisionerConnection)
+//  .count(java.lang.Number|TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
 //  .provider(TerraformProvider)
-//  .provisioners(java.util.List<FileProvisioner)
-//  .provisioners(LocalExecProvisioner)
-//  .provisioners(RemoteExecProvisioner>)
+//  .provisioners(java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner>)
     .url(java.lang.String)
 //  .caCertPem(java.lang.String)
 //  .clientCertPem(java.lang.String)
 //  .clientKeyPem(java.lang.String)
-//  .insecure(java.lang.Boolean)
-//  .insecure(IResolvable)
+//  .insecure(java.lang.Boolean|IResolvable)
 //  .method(java.lang.String)
 //  .requestBody(java.lang.String)
 //  .requestHeaders(java.util.Map<java.lang.String, java.lang.String>)
@@ -41,18 +36,18 @@ DataHttp.Builder.create(Construct scope, java.lang.String id)
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection\|com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.count">count</a></code> | <code>java.lang.Number\|com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.url">url</a></code> | <code>java.lang.String</code> | The URL for the request. Supported schemes are `http` and `https`. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.caCertPem">caCertPem</a></code> | <code>java.lang.String</code> | Certificate Authority (CA) in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.clientCertPem">clientCertPem</a></code> | <code>java.lang.String</code> | Client certificate in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.clientKeyPem">clientKeyPem</a></code> | <code>java.lang.String</code> | Client key in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format. |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.insecure">insecure</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Disables verification of the server's certificate chain and hostname. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.insecure">insecure</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Disables verification of the server's certificate chain and hostname. Defaults to `false`. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.method">method</a></code> | <code>java.lang.String</code> | The HTTP Method for the request. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.requestBody">requestBody</a></code> | <code>java.lang.String</code> | The request body as a string. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.requestHeaders">requestHeaders</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | A map of request header field names and values. |
@@ -81,13 +76,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.connection"></a>
 
-- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection
+- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection|com.hashicorp.cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.count"></a>
 
-- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
+- *Type:* java.lang.Number|com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -117,7 +112,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.provisioners"></a>
 
-- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner>
+- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner|com.hashicorp.cdktf.LocalExecProvisioner|com.hashicorp.cdktf.RemoteExecProvisioner>
 
 ---
 
@@ -163,7 +158,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `insecure`<sup>Optional</sup> <a name="insecure" id="@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.insecure"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Disables verification of the server's certificate chain and hostname. Defaults to `false`.
 
@@ -641,7 +636,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.terraformMetaArguments">terraformMetaArguments</a></code> | <code>java.util.Map<java.lang.String, java.lang.Object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.terraformResourceType">terraformResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>com.hashicorp.cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.count">count</a></code> | <code>java.lang.Number\|com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.dependsOn">dependsOn</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -656,17 +651,17 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.caCertPemInput">caCertPemInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.clientCertPemInput">clientCertPemInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.clientKeyPemInput">clientKeyPemInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.insecureInput">insecureInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.insecureInput">insecureInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.methodInput">methodInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestBodyInput">requestBodyInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestHeadersInput">requestHeadersInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestTimeoutMsInput">requestTimeoutMsInput</a></code> | <code>java.lang.Number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.retryInput">retryInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.retryInput">retryInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.urlInput">urlInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.caCertPem">caCertPem</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.clientCertPem">clientCertPem</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.clientKeyPem">clientKeyPem</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.insecure">insecure</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.insecure">insecure</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.method">method</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestBody">requestBody</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestHeaders">requestHeaders</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
@@ -750,10 +745,10 @@ public TerraformProviderGeneratorMetadata getTerraformGeneratorMetadata();
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-http.dataHttp.DataHttp.property.count"></a>
 
 ```java
-public java.lang.Object getCount();
+public java.lang.Number|TerraformCount getCount();
 ```
 
-- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
+- *Type:* java.lang.Number|com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -900,10 +895,10 @@ public java.lang.String getClientKeyPemInput();
 ##### `insecureInput`<sup>Optional</sup> <a name="insecureInput" id="@cdktf/provider-http.dataHttp.DataHttp.property.insecureInput"></a>
 
 ```java
-public java.lang.Object getInsecureInput();
+public java.lang.Boolean|IResolvable getInsecureInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -950,10 +945,10 @@ public java.lang.Number getRequestTimeoutMsInput();
 ##### `retryInput`<sup>Optional</sup> <a name="retryInput" id="@cdktf/provider-http.dataHttp.DataHttp.property.retryInput"></a>
 
 ```java
-public java.lang.Object getRetryInput();
+public IResolvable|DataHttpRetry getRetryInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a>
 
 ---
 
@@ -1000,10 +995,10 @@ public java.lang.String getClientKeyPem();
 ##### `insecure`<sup>Required</sup> <a name="insecure" id="@cdktf/provider-http.dataHttp.DataHttp.property.insecure"></a>
 
 ```java
-public java.lang.Object getInsecure();
+public java.lang.Boolean|IResolvable getInsecure();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -1085,23 +1080,18 @@ public java.lang.String getTfResourceType();
 import com.hashicorp.cdktf.providers.http.data_http.DataHttpConfig;
 
 DataHttpConfig.builder()
-//  .connection(SSHProvisionerConnection)
-//  .connection(WinrmProvisionerConnection)
-//  .count(java.lang.Number)
-//  .count(TerraformCount)
+//  .connection(SSHProvisionerConnection|WinrmProvisionerConnection)
+//  .count(java.lang.Number|TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
 //  .provider(TerraformProvider)
-//  .provisioners(java.util.List<FileProvisioner)
-//  .provisioners(LocalExecProvisioner)
-//  .provisioners(RemoteExecProvisioner>)
+//  .provisioners(java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner>)
     .url(java.lang.String)
 //  .caCertPem(java.lang.String)
 //  .clientCertPem(java.lang.String)
 //  .clientKeyPem(java.lang.String)
-//  .insecure(java.lang.Boolean)
-//  .insecure(IResolvable)
+//  .insecure(java.lang.Boolean|IResolvable)
 //  .method(java.lang.String)
 //  .requestBody(java.lang.String)
 //  .requestHeaders(java.util.Map<java.lang.String, java.lang.String>)
@@ -1114,18 +1104,18 @@ DataHttpConfig.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection\|com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.count">count</a></code> | <code>java.lang.Number\|com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.url">url</a></code> | <code>java.lang.String</code> | The URL for the request. Supported schemes are `http` and `https`. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.caCertPem">caCertPem</a></code> | <code>java.lang.String</code> | Certificate Authority (CA) in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.clientCertPem">clientCertPem</a></code> | <code>java.lang.String</code> | Client certificate in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.clientKeyPem">clientKeyPem</a></code> | <code>java.lang.String</code> | Client key in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format. |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.insecure">insecure</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Disables verification of the server's certificate chain and hostname. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.insecure">insecure</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Disables verification of the server's certificate chain and hostname. Defaults to `false`. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.method">method</a></code> | <code>java.lang.String</code> | The HTTP Method for the request. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.requestBody">requestBody</a></code> | <code>java.lang.String</code> | The request body as a string. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.requestHeaders">requestHeaders</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | A map of request header field names and values. |
@@ -1137,20 +1127,20 @@ DataHttpConfig.builder()
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-http.dataHttp.DataHttpConfig.property.connection"></a>
 
 ```java
-public java.lang.Object getConnection();
+public SSHProvisionerConnection|WinrmProvisionerConnection getConnection();
 ```
 
-- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection
+- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection|com.hashicorp.cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-http.dataHttp.DataHttpConfig.property.count"></a>
 
 ```java
-public java.lang.Object getCount();
+public java.lang.Number|TerraformCount getCount();
 ```
 
-- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
+- *Type:* java.lang.Number|com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -1197,10 +1187,10 @@ public TerraformProvider getProvider();
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-http.dataHttp.DataHttpConfig.property.provisioners"></a>
 
 ```java
-public java.lang.Object getProvisioners();
+public java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner> getProvisioners();
 ```
 
-- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner>
+- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner|com.hashicorp.cdktf.LocalExecProvisioner|com.hashicorp.cdktf.RemoteExecProvisioner>
 
 ---
 
@@ -1263,10 +1253,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `insecure`<sup>Optional</sup> <a name="insecure" id="@cdktf/provider-http.dataHttp.DataHttpConfig.property.insecure"></a>
 
 ```java
-public java.lang.Object getInsecure();
+public java.lang.Boolean|IResolvable getInsecure();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Disables verification of the server's certificate chain and hostname. Defaults to `false`.
 
@@ -1653,7 +1643,7 @@ public void resetMinDelayMs()
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.attempts">attempts</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.maxDelayMs">maxDelayMs</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.minDelayMs">minDelayMs</a></code> | <code>java.lang.Number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a></code> | *No description.* |
 
 ---
 
@@ -1744,10 +1734,10 @@ public java.lang.Number getMinDelayMs();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|DataHttpRetry getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a>
 
 ---
 

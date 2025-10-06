@@ -14,18 +14,18 @@ from cdktf_cdktf_provider_http import data_http
 dataHttp.DataHttp(
   scope: Construct,
   id: str,
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   url: str,
   ca_cert_pem: str = None,
   client_cert_pem: str = None,
   client_key_pem: str = None,
-  insecure: typing.Union[bool, IResolvable] = None,
+  insecure: bool | IResolvable = None,
   method: str = None,
   request_body: str = None,
   request_headers: typing.Mapping[str] = None,
@@ -38,18 +38,18 @@ dataHttp.DataHttp(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.url">url</a></code> | <code>str</code> | The URL for the request. Supported schemes are `http` and `https`. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.caCertPem">ca_cert_pem</a></code> | <code>str</code> | Certificate Authority (CA) in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.clientCertPem">client_cert_pem</a></code> | <code>str</code> | Client certificate in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.clientKeyPem">client_key_pem</a></code> | <code>str</code> | Client key in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format. |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.insecure">insecure</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Disables verification of the server's certificate chain and hostname. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.insecure">insecure</a></code> | <code>bool \| cdktf.IResolvable</code> | Disables verification of the server's certificate chain and hostname. Defaults to `false`. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.method">method</a></code> | <code>str</code> | The HTTP Method for the request. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.requestBody">request_body</a></code> | <code>str</code> | The request body as a string. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.requestHeaders">request_headers</a></code> | <code>typing.Mapping[str]</code> | A map of request header field names and values. |
@@ -78,13 +78,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.connection"></a>
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -114,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.provisioners"></a>
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -160,7 +160,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `insecure`<sup>Optional</sup> <a name="insecure" id="@cdktf/provider-http.dataHttp.DataHttp.Initializer.parameter.insecure"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Disables verification of the server's certificate chain and hostname. Defaults to `false`.
 
@@ -704,7 +704,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -719,17 +719,17 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/http/3.5.0
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.caCertPemInput">ca_cert_pem_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.clientCertPemInput">client_cert_pem_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.clientKeyPemInput">client_key_pem_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.insecureInput">insecure_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.insecureInput">insecure_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.methodInput">method_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestBodyInput">request_body_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestHeadersInput">request_headers_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestTimeoutMsInput">request_timeout_ms_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.retryInput">retry_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.retryInput">retry_input</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.urlInput">url_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.caCertPem">ca_cert_pem</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.clientCertPem">client_cert_pem</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.clientKeyPem">client_key_pem</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.insecure">insecure</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.insecure">insecure</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.method">method</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestBody">request_body</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttp.property.requestHeaders">request_headers</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
@@ -813,10 +813,10 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-http.dataHttp.DataHttp.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -963,10 +963,10 @@ client_key_pem_input: str
 ##### `insecure_input`<sup>Optional</sup> <a name="insecure_input" id="@cdktf/provider-http.dataHttp.DataHttp.property.insecureInput"></a>
 
 ```python
-insecure_input: typing.Union[bool, IResolvable]
+insecure_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1013,10 +1013,10 @@ request_timeout_ms_input: typing.Union[int, float]
 ##### `retry_input`<sup>Optional</sup> <a name="retry_input" id="@cdktf/provider-http.dataHttp.DataHttp.property.retryInput"></a>
 
 ```python
-retry_input: typing.Union[IResolvable, DataHttpRetry]
+retry_input: IResolvable | DataHttpRetry
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a>
 
 ---
 
@@ -1063,10 +1063,10 @@ client_key_pem: str
 ##### `insecure`<sup>Required</sup> <a name="insecure" id="@cdktf/provider-http.dataHttp.DataHttp.property.insecure"></a>
 
 ```python
-insecure: typing.Union[bool, IResolvable]
+insecure: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1148,18 +1148,18 @@ tfResourceType: str
 from cdktf_cdktf_provider_http import data_http
 
 dataHttp.DataHttpConfig(
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   url: str,
   ca_cert_pem: str = None,
   client_cert_pem: str = None,
   client_key_pem: str = None,
-  insecure: typing.Union[bool, IResolvable] = None,
+  insecure: bool | IResolvable = None,
   method: str = None,
   request_body: str = None,
   request_headers: typing.Mapping[str] = None,
@@ -1172,18 +1172,18 @@ dataHttp.DataHttpConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.url">url</a></code> | <code>str</code> | The URL for the request. Supported schemes are `http` and `https`. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.caCertPem">ca_cert_pem</a></code> | <code>str</code> | Certificate Authority (CA) in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.clientCertPem">client_cert_pem</a></code> | <code>str</code> | Client certificate in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.clientKeyPem">client_key_pem</a></code> | <code>str</code> | Client key in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format. |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.insecure">insecure</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Disables verification of the server's certificate chain and hostname. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.insecure">insecure</a></code> | <code>bool \| cdktf.IResolvable</code> | Disables verification of the server's certificate chain and hostname. Defaults to `false`. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.method">method</a></code> | <code>str</code> | The HTTP Method for the request. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.requestBody">request_body</a></code> | <code>str</code> | The request body as a string. |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpConfig.property.requestHeaders">request_headers</a></code> | <code>typing.Mapping[str]</code> | A map of request header field names and values. |
@@ -1195,20 +1195,20 @@ dataHttp.DataHttpConfig(
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-http.dataHttp.DataHttpConfig.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-http.dataHttp.DataHttpConfig.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -1255,10 +1255,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-http.dataHttp.DataHttpConfig.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -1321,10 +1321,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `insecure`<sup>Optional</sup> <a name="insecure" id="@cdktf/provider-http.dataHttp.DataHttpConfig.property.insecure"></a>
 
 ```python
-insecure: typing.Union[bool, IResolvable]
+insecure: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Disables verification of the server's certificate chain and hostname. Defaults to `false`.
 
@@ -1736,7 +1736,7 @@ def reset_min_delay_ms() -> None
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.attempts">attempts</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.maxDelayMs">max_delay_ms</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.minDelayMs">min_delay_ms</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a></code> | *No description.* |
 
 ---
 
@@ -1827,10 +1827,10 @@ min_delay_ms: typing.Union[int, float]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-http.dataHttp.DataHttpRetryOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DataHttpRetry]
+internal_value: IResolvable | DataHttpRetry
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-http.dataHttp.DataHttpRetry">DataHttpRetry</a>
 
 ---
 
